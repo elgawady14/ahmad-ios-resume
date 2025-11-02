@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Abdul-Jawad Mahmoud - iOS Tech Lead & Architect | 11+ Years Experience | 30+ Apps</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.5in;
+        }
+
+        @page :first {
+            margin-top: 0.3in;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            font-size: 11px;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #60A5FA 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            50% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .header h2 {
+            font-size: 18px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1E40AF;
+            border-bottom: 2px solid #1E40AF;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: linear-gradient(90deg, #1E40AF, #3B82F6, #60A5FA);
+            background-size: 200% 100%;
+            animation: gradientShift 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .two-column {
+            display: flex;
+            gap: 20px;
+        }
+
+        .left-column {
+            flex: 2;
+        }
+
+        .right-column {
+            flex: 1;
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: #333;
+            font-size: 13px;
+        }
+
+        .company {
+            color: #1E40AF;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .hyperlink {
+            color: #1E40AF;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .hyperlink:hover {
+            color: #3B82F6;
+            border-bottom: 1px solid #3B82F6;
+            text-shadow: 0 1px 2px rgba(30, 64, 175, 0.1);
+        }
+
+        .portfolio-link {
+            color: #1E40AF;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .portfolio-link:hover {
+            color: #3B82F6;
+            border-bottom: 1px solid #3B82F6;
+        }
+
+        .duration {
+            color: #666;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .job-description {
+            margin-top: 8px;
+        }
+
+        .job-description ul {
+            margin-left: 15px;
+        }
+
+        .job-description li {
+            margin-bottom: 4px;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #1E40AF;
+        }
+
+        .skill-category h4 {
+            color: #333;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .skill-tag {
+            background: #1E40AF;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 9px;
+            font-weight: 500;
+        }
+
+        .project-item {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #5856D6;
+        }
+
+        .project-title {
+            font-weight: 700;
+            color: #333;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .project-tech {
+            color: #666;
+            font-size: 10px;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        .project-description {
+            color: #555;
+            font-size: 10px;
+            line-height: 1.3;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #1E40AF20 0%, #3B82F620 100%);
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 4px solid #1E40AF;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(30, 64, 175, 0.1);
+        }
+
+        .education {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #5856D6;
+        }
+
+        .print-friendly {
+            page-break-inside: avoid;
+        }
+
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            .experience-item {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Ahmad Abdul-Jawad Mahmoud</h1>
+            <h2>iOS Tech Lead & Architect</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <span>ahmad_abdulgawad.mahmoud@yahoo.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <span>+20 112 687 3152 | +966 507 242 916</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>Cairo, Egypt</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💼</span>
+                    <a href="https://www.linkedin.com/in/ahmadabdulgawadmahmoud/" style="color: white; text-decoration: none; transition: all 0.3s ease;">LinkedIn Profile</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="highlight">
+            <strong>Senior iOS Tech Lead</strong> with 10+ years of experience leading mobile development teams and architecting scalable iOS applications. Expert in modern SwiftUI, team leadership, and delivering high-performance apps used by millions of users across the MENA region.
+        </div>
+
+        <div class="two-column">
+            <div class="left-column">
+                <section class="section">
+                    <h3 class="section-title">Professional Experience</h3>
+
+                    <div class="experience-item print-friendly">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Senior iOS Tech Lead</div>
+                                <div class="company"><a href="https://apps.apple.com/sa/app/marn/id1495693049" class="hyperlink">Marn (POS Solutions)</a></div>
+                            </div>
+                            <div class="duration">Aug 2019 - Present</div>
+                        </div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Lead and mentor iOS development team of 5+ developers building enterprise POS solutions</li>
+                                <li>Architect scalable offline-first systems using CoreData with seamless cloud synchronization serving +20k restaurants/cafes</li>
+                                <li>Design and implement sophisticated table management, order processing, and inventory tracking systems</li>
+                                <li>Spearhead migration to SwiftUI and adoption of modern iOS development practices (Combine, async/await)</li>
+                                <li>Collaborate with product, design, and backend teams to deliver high-impact features and drive technical roadmap</li>
+                                <li>Optimize app performance resulting in 40% faster load times and 99.8 ~ 99.9% crash-free rate</li>
+                                <li>Establish CI/CD pipelines and automated testing practices reducing deployment time by 60%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item print-friendly">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Senior iOS & Apple Watch Developer</div>
+                                <div class="company"><a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" class="hyperlink">Ego | The Ride Hailing App</a></div>
+                            </div>
+                            <div class="duration">Mar 2018 - May 2019</div>
+                        </div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Developed comprehensive ride-hailing ecosystem (iOS, watchOS) serving 15M+ users across Saudi Arabia market</li>
+                                <li>Implemented real-time GPS tracking and navigation using MapKit with optimized route algorithms</li>
+                                <li>Integrated Apple Pay, HyperPay payment systems and push notification infrastructure</li>
+                                <li>Created seamless handoff experiences between iPhone and Apple Watch for continuous ride tracking</li>
+                                <li>Built driver rating system and real-time fare calculation engine</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item print-friendly">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Senior iOS Developer</div>
+                                <div class="company"><a href="https://apps.apple.com/sa/app/hungerstation/id596011949" class="hyperlink">HungerStation (DeliveryHero Group)</a></div>
+                            </div>
+                            <div class="duration">Sep 2016 - Mar 2018</div>
+                        </div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Contributed to major food delivery platform (20M+ users)</li>
+                                <li>Optimized app performance for high-volume transaction processing</li>
+                                <li>Implemented real-time order tracking and delivery optimization</li>
+                                <li>Collaborated with backend teams on API design and integration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item print-friendly">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">iOS Developer</div>
+                                <div class="company"><a href="https://www.linkedin.com/company/pulse-company-ltd-/" class="hyperlink">ALNapedh</a></div>
+                            </div>
+                            <div class="duration">May 2016 - Aug 2016</div>
+                        </div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Developed food ordering applications with Firebase integration and real-time features</li>
+                                <li>Implemented Spreedly payment solutions and live chat functionality</li>
+                                <li>Built responsive UI designs with Auto Layout for multiple device sizes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item print-friendly">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">iOS & Apple Watch Developer</div>
+                                <div class="company"><a href="https://niledesign.com" class="hyperlink">Nile Design Co.</a></div>
+                            </div>
+                            <div class="duration">July 2015 - Sep 2015</div>
+                        </div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Early adopter of Apple Watch development (watchOS 1-2)</li>
+                                <li>Developed SwiftUI applications since WWDC 2019</li>
+                                <li>Built foundation in iOS and watchOS app development</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item print-friendly">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">iOS Developer</div>
+                                <div class="company"><a href="https://www.linkedin.com/company/uk-pro-solutions-ltd" class="hyperlink">UK Pro. Solutions Ltd.</a></div>
+                            </div>
+                            <div class="duration">May 2014 - May 2015</div>
+                        </div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Foundation iOS development experience in Objective-C and early Swift</li>
+                                <li>Developed various applications including social networks and e-commerce platforms</li>
+                                <li>Learned core iOS development principles and App Store deployment processes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Key Projects</h3>
+
+                    <div class="project-item">
+                        <div class="project-title"><a href="https://apps.apple.com/sa/app/hungerstation/id596011949" class="hyperlink">HungerStation Food Delivery</a></div>
+                        <div class="project-tech">UIKit, Firebase, Real-time APIs, Performance Optimization</div>
+                        <div class="project-description">
+                            Major food delivery platform serving 20M+ users across Saudi Arabia and Bahrain. Focused on performance optimization and real-time order tracking capabilities.
+                            <div style="margin-top: 5px; font-size: 9px; color: #1E40AF; font-weight: 600;">⭐ 4.5/5 (+1.9M ratings)</div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title"><a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" class="hyperlink">Ego | The Ride Hailing App</a></div>
+                        <div class="project-tech">MapKit, Core Location, Apple Pay, Push Notifications, watchOS</div>
+                        <div class="project-description">
+                            Complete ride-hailing ecosystem including rider app, driver app, and Apple Watch companion. Features real-time GPS tracking, Apple Pay integration, and seamless cross-device experiences serving 15M+ users with thousands of daily rides.
+                            <div style="margin-top: 5px; font-size: 9px; color: #1E40AF; font-weight: 600;">⭐ 4.7/5 (+211.8k ratings)</div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title"><a href="https://apps.apple.com/sa/app/marn/id1495693049" class="hyperlink">Marn iPad POS System</a></div>
+                        <div class="project-tech">SwiftUI, CoreData, CloudKit, Real-time Sync</div>
+                        <div class="project-description">
+                            Enterprise point-of-sale system serving +20k restaurants/cafes across Saudi Arabia. Features offline-first architecture, complex table management, and real-time order processing with cloud synchronization.
+                            <div style="margin-top: 5px; font-size: 9px; color: #1E40AF; font-weight: 600;">⭐ 4.8/5 (2,437 ratings)</div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title"><a href="https://apps.apple.com/au/app/punters-horse-racing-form/id916114449" class="hyperlink">Punters - Horse Racing & Form</a></div>
+                        <div class="project-tech">In-App Purchases, Push Notifications, Real-time Data</div>
+                        <div class="project-description">
+                            Horse racing tips and form guide app providing punting services. Features real-time race data, expert tips, and comprehensive form analysis for racing enthusiasts.
+                            <div style="margin-top: 5px; font-size: 9px; color: #1E40AF; font-weight: 600;">⭐ 4.7/5 (1,650 ratings)</div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title"><a href="https://apps.apple.com/eg/app/daleelo-muslim-community/id536783455" class="hyperlink">Daleelo Muslim Community</a></div>
+                        <div class="project-tech">MapKit, Core Location, Social SDKs, Community Features</div>
+                        <div class="project-description">
+                            Muslim community app serving users across the US with prayer times, mosque finder, and community features. Released version 2.6.3 with enhanced location services and social integration.
+                            <div style="margin-top: 5px; font-size: 9px; color: #1E40AF; font-weight: 600;">⭐ 4.5/5 (1,287 ratings)</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Project Portfolios</h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;">
+                        <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; border-left: 4px solid #60A5FA;">
+                            <div style="font-weight: 700; font-size: 11px; color: #333; margin-bottom: 4px;">🍽️ Food Delivery & Gaming</div>
+                            <div style="font-size: 9px; color: #666; line-height: 1.3;">
+                                • <a href="https://apps.apple.com/sa/app/hungerstation/id596011949" class="hyperlink">HungerStation (AppStore)</a> - Food delivery platform<br>
+                                • <a href="https://apps.apple.com/au/app/punters-horse-racing-form/id916114449" class="hyperlink">Punters Page (AppStore)</a> - Horse racing tips
+                            </div>
+                        </div>
+
+                        <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; border-left: 4px solid #3B82F6;">
+                            <div style="font-weight: 700; font-size: 11px; color: #333; margin-bottom: 4px;">🚗 Transportation</div>
+                            <div style="font-size: 9px; color: #666; line-height: 1.3;">
+                                • <a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" class="hyperlink">Ego | The Ride Hailing (AppStore)</a> - Ride hailing for riders<br>
+                                • <a href="https://apps.apple.com/sa/app/ego-driver/id1379066908" class="hyperlink">Ego Driver (AppStore)</a> - Driver companion app<br>
+                                • <a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" class="hyperlink">Ego Watch App (AppStore)</a> - Apple Watch integration
+                            </div>
+                        </div>
+
+                        <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; border-left: 4px solid #6366F1;">
+                            <div style="font-weight: 700; font-size: 11px; color: #333; margin-bottom: 4px;">📱 Enterprise Apps</div>
+                            <div style="font-size: 9px; color: #666; line-height: 1.3;">
+                                • <a href="https://apps.apple.com/sa/app/marn/id1495693049" class="hyperlink">Marn POS (AppStore)</a> - Restaurant management<br>
+                                • <a href="https://www.dropbox.com/scl/fi/83hd7cp3l9ou5z604zi2s/MedicalGuide-Screenshots.zip?rlkey=itkubk9kdtgjc0ncqemxlnqg7&dl=0" class="portfolio-link">Medical Guide (Portfolio)</a> - Healthcare directory
+                            </div>
+                        </div>
+
+                        <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; border-left: 4px solid #6366F1;">
+                            <div style="font-weight: 700; font-size: 11px; color: #333; margin-bottom: 4px;">👥 Social & Community</div>
+                            <div style="font-size: 9px; color: #666; line-height: 1.3;">
+                                • <a href="https://apps.apple.com/eg/app/daleelo-muslim-community/id536783455" class="hyperlink">Daleelo (AppStore)</a> - Muslim community app<br>
+                                • <a href="https://www.dropbox.com/scl/fi/umdvm22e7bpptuz17p7bs/NU-inc-Documentation.zip?rlkey=mi4tvjt883ewlg92pm3vgrinl&e=1&dl=0" class="portfolio-link">NU-inc (Portfolio)</a> - Football fans network<br>
+                                • <a href="https://www.dropbox.com/scl/fi/8kb68efzp2il392ruvbyl/Veeu-Documentation.zip?rlkey=mt5trzdw77c0uvc8yynvp3r1z&dl=0" class="portfolio-link">VeeU (Portfolio)</a> - Social multimedia platform
+                            </div>
+                        </div>
+
+                        <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; border-left: 4px solid #3B82F6;">
+                            <div style="font-weight: 700; font-size: 11px; color: #333; margin-bottom: 4px;">⌚ watchOS Apps</div>
+                            <div style="font-size: 9px; color: #666; line-height: 1.3;">
+                                • <a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" class="hyperlink">Ego Watch App (AppStore)</a> - Ride tracking<br>
+                                • <a href="https://www.dropbox.com/scl/fi/gp3doqzmquws7wc9dlmvm/TaQs.zip?rlkey=wxeew62uvehnl2ilwdn1s9af0&e=1&dl=0" class="portfolio-link">TaQs Weather (Portfolio)</a> - Weather forecast<br>
+                                • <a href="https://www.dropbox.com/scl/fi/amjjbkolrk16uyr3vhprb/TweetMe.zip?rlkey=wblefya3ylpcrhsv9o3usfb6y&e=1&dl=0" class="portfolio-link">TweetMe (Portfolio)</a> - Text to image converter
+                            </div>
+                        </div>
+
+                        <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; border-left: 4px solid #60A5FA;">
+                            <div style="font-weight: 700; font-size: 11px; color: #333; margin-bottom: 4px;">🛍️ E-commerce & Services</div>
+                            <div style="font-size: 9px; color: #666; line-height: 1.3;">
+                                • <a href="https://www.dropbox.com/scl/fi/fjpw0x2m1enjnb1w0wr2l/iBss-Screenshots.zip?rlkey=36s1asz3jugitvhtnlofj4cve&dl=0" class="portfolio-link">iBss (Portfolio)</a> - Spa/salon reservations<br>
+                                • <a href="https://www.dropbox.com/scl/fi/w5p889lbud4fke7mrayp3/Exlusive-Luxe-Documentation.zip?rlkey=0dlp7h4m5862fbcyfkanfudr7&e=1&dl=0" class="portfolio-link">Exclusive Luxe (Portfolio)</a> - Fashion retail<br>
+                                • <a href="https://www.dropbox.com/scl/fi/u0iam6o5remsg1rsa77pq/Scratch-Screenshots.zip?rlkey=03bd6qgzq4wtc3z6ncvbq5h70&e=1&dl=0" class="portfolio-link">Scratch (Portfolio)</a> - Beauty services booking
+                            </div>
+                        </div>
+
+                        <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; border-left: 4px solid #1E40AF;">
+                            <div style="font-weight: 700; font-size: 11px; color: #333; margin-bottom: 4px;">🕌 Religious & Educational</div>
+                            <div style="font-size: 9px; color: #666; line-height: 1.3;">
+                                • <a href="https://www.dropbox.com/scl/fi/h4zmcye9woc8cbkdwic82/Afasy-Screenshots.zip?rlkey=8jgcmwyxdtkae5e4r8gjd1i3s&dl=0" class="portfolio-link">Afasy (Portfolio)</a> - Quran & prayer times<br>
+                                • <a href="https://www.dropbox.com/scl/fi/ibvqv5dkvk7u3yq27jy6v/ANG-ArabNileGroup.zip?rlkey=i68964la1sht42kpnzuxohb2c&e=1&dl=0" class="portfolio-link">ArabNileGroup (Portfolio)</a> - Arabic book reader
+                            </div>
+                        </div>
+
+                        <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; border-left: 4px solid #3B82F6;">
+                            <div style="font-weight: 700; font-size: 11px; color: #333; margin-bottom: 4px;">🛠️ Utility & Tools</div>
+                            <div style="font-size: 9px; color: #666; line-height: 1.3;">
+                                • <a href="https://www.dropbox.com/scl/fi/a0nem8v4d3nj4mchwrst0/Unlocking-Smart-Snapshots.zip?rlkey=xg96lps1mkw9jor82ipymnvd4&e=1&dl=0" class="portfolio-link">Unlocking Smart (Portfolio)</a> - Phone unlocking<br>
+                                • <a href="https://www.dropbox.com/scl/fi/krfbs0ww7y930o4ehpj0b/Insta-Screenshots.zip?rlkey=gcu7parc7tabchmt86i99yjfx&e=1&dl=0" class="portfolio-link">Insta (Portfolio)</a> - Social networking features<br>
+                                • <a href="https://www.dropbox.com/scl/fi/eiancyi4haxe1p7iuu79c/iContacts-Documentation.zip?rlkey=5q2t69f0gtfpp8bnq31jwrevz&dl=0" class="portfolio-link">iContacts (Portfolio)</a> - Contact management<br>
+                                • <span style="font-style: italic; color: #1E40AF;">🚀 First iOS App</span> - Built before professional career began
+                            </div>
+                        </div>
+
+                        <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; border-left: 4px solid #60A5FA;">
+                            <div style="font-weight: 700; font-size: 11px; color: #333; margin-bottom: 4px;">🤖 AI & Machine Learning 🎓 Graduation Project</div>
+                            <div style="font-size: 9px; color: #666; line-height: 1.3;">
+                                • <a href="https://www.dropbox.com/scl/fi/l3bs0rvczj35jjngmq4ia/RecognizeMe.rar?rlkey=51c6eza3bo9ursp8w1gmqcvmp&dl=0" class="portfolio-link">RecognizeMe (Portfolio)</a> - Facial recognition system<br>
+                                • <span style="font-style: italic; color: #1E40AF;">🎓 Graduation Project</span> - Data mining & OpenCV implementation
+                            </div>
+                        </div>
+
+                        <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; border-left: 4px solid #60A5FA;">
+                            <div style="font-weight: 700; font-size: 11px; color: #333; margin-bottom: 4px;">🌐 Web Projects</div>
+                            <div style="font-size: 9px; color: #666; line-height: 1.3;">
+                                • <a href="https://www.dropbox.com/scl/fi/tgpvbx0ixk5zmnoicu2up/Facebook.rar?rlkey=7dbm8fpplvvfozg4nqhwjkadu&dl=0" class="portfolio-link">FaceDemo (Portfolio)</a> - Facebook-like web app<br>
+                                • <a href="https://www.dropbox.com/scl/fi/5yuhlscb9hwu6q0xhu857/Web-Pages.rar?rlkey=gqs9ddbg3r46lbcyonm3yufc5&dl=0" class="portfolio-link">Web Pages (Portfolio)</a> - HTML/CSS collection<br>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="section">
+                    <h3 class="section-title">Technical Leadership</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Leadership</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Team Management</span>
+                                <span class="skill-tag">Technical Roadmap</span>
+                                <span class="skill-tag">Code Review</span>
+                                <span class="skill-tag">Mentoring</span>
+                                <span class="skill-tag">Agile/Scrum</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Core Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>iOS (2025)</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Swift 6.0</span>
+                                <span class="skill-tag">SwiftUI</span>
+                                <span class="skill-tag">UIKit</span>
+                                <span class="skill-tag">Combine</span>
+                                <span class="skill-tag">async/await</span>
+                                <span class="skill-tag">SwiftData</span>
+                                <span class="skill-tag">iOS 18+</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Architecture</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MVVM</span>
+                                <span class="skill-tag">VIPER</span>
+                                <span class="skill-tag">Clean Architecture</span>
+                                <span class="skill-tag">Coordinator</span>
+                                <span class="skill-tag">TDD</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Apple Ecosystem</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">watchOS</span>
+                                <span class="skill-tag">tvOS</span>
+                                <span class="skill-tag">macOS</span>
+                                <span class="skill-tag">WidgetKit</span>
+                                <span class="skill-tag">Live Activities</span>
+                                <span class="skill-tag">App Intents</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Modern Features</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Core ML</span>
+                                <span class="skill-tag">Vision</span>
+                                <span class="skill-tag">ARKit</span>
+                                <span class="skill-tag">Dynamic Island</span>
+                                <span class="skill-tag">App Tracking</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Development Tools</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Xcode 15+</span>
+                                <span class="skill-tag">Fastlane</span>
+                                <span class="skill-tag">TestFlight</span>
+                                <span class="skill-tag">Instruments</span>
+                                <span class="skill-tag">Git</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Backend & APIs</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">REST APIs</span>
+                                <span class="skill-tag">GraphQL</span>
+                                <span class="skill-tag">Firebase</span>
+                                <span class="skill-tag">CloudKit</span>
+                                <span class="skill-tag">WebSockets</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>AI Assistants</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Claude</span>
+                                <span class="skill-tag">ChatGPT</span>
+                                <span class="skill-tag">Copilot</span>
+                                <span class="skill-tag">Gemini</span>
+                                <span class="skill-tag">Cursor</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Education</h3>
+                    <div class="education">
+                        <div style="font-weight: 700; margin-bottom: 5px;">Bachelor of Information Systems</div>
+                        <div style="color: #666; font-size: 10px; margin-bottom: 5px;">Computer Sciences College</div>
+                        <div style="color: #666; font-size: 10px; margin-bottom: 5px;">Asyut University, Egypt (2009-2013)</div>
+                        <div style="color: #007AFF; font-size: 10px; font-weight: 600;">iOS Semester: Excellent (91.5%)</div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Certifications</h3>
+                    <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; font-size: 10px;">
+                        <div style="font-weight: 600; margin-bottom: 3px;">ESTQB Foundation Level</div>
+                        <div style="color: #666;">Egyptian Software Testing Qualification Board</div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Languages</h3>
+                    <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; font-size: 10px;">
+                        <div><strong>Arabic:</strong> Native</div>
+                        <div><strong>English:</strong> Professional</div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Achievements</h3>
+                    <div style="font-size: 10px; line-height: 1.4;">
+                        <div style="margin-bottom: 8px; padding-left: 10px; text-indent: -10px;">• Built Food delivery platform serving 20M+ users across Saudi Arabia and Bahrain.</div>
+                        <div style="margin-bottom: 8px; padding-left: 10px; text-indent: -10px;">• Built Ride-hailing ecosystem serving 15M+ in Saudi Arabia.</div>
+                        <div style="margin-bottom: 8px; padding-left: 10px; text-indent: -10px;">• Led development of POS system serving 20k+ restaurants/cafes.</div>
+                        <div style="margin-bottom: 8px; padding-left: 10px; text-indent: -10px;">• 10+ apps published on App Store used by millions of users across the MENA region.</div>
+                        <div style="margin-bottom: 8px; padding-left: 10px; text-indent: -10px;">• 30+ iOS Projects Delivered.</div>
+                        <div style="margin-bottom: 8px; padding-left: 10px; text-indent: -10px;">• Early Swift adopter (WWDC 2014) and Early SwiftUI adopter (WWDC 2019).</div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer style="text-align: center; color: #666; font-size: 9px; margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee;">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+                <span>🏆 30+ iOS Projects Delivered</span>
+                <span>•</span>
+                <span>📱 11+ Years iOS Development</span>
+                <span>•</span>
+                <span>🎯 Expert in SwiftUI & Modern iOS</span>
+                <span>•</span>
+                <span style="font-style: italic;">Last Updated: 2025</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
