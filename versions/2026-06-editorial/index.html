@@ -762,6 +762,9 @@
             .folio-cat, .skill-block, .contacts, .live-link { break-inside: avoid; }
             .sec-head { break-after: avoid; }
 
+            /* drop the portrait shadow — Chrome renders it as a hard dark block in PDF */
+            .portrait { box-shadow: none; }
+
             /* static output: neutralise hover-only states */
             .proj:hover, .tag:hover, .contact:hover { background: var(--paper); color: inherit; }
             a.contact:hover { background: transparent; color: var(--ink-2); }
