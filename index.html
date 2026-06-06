@@ -73,9 +73,11 @@
             position: absolute;
             inset: 0;
             pointer-events: none;
-            opacity: 0.5;
+            opacity: 0.55;
             mix-blend-mode: multiply;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+            background-image: url("assets/grain.png");
+            background-size: 240px 240px;
+            background-repeat: repeat;
         }
         .sheet > * { position: relative; z-index: 1; }
 
@@ -727,54 +729,43 @@
         }
 
         /* ============================================================
-           PRINT — clean A4, packed pages, no theatrics
+           PRINT — full screen-fidelity: the PDF mirrors the web design
+           (same type scale, drop cap, paper grain, colours & proportions)
            ============================================================ */
-        @page { size: A4; margin: 11mm; }
+        @page { size: A4; margin: 0; }
         @media print {
-            body {
-                background: #fff;
+            html, body {
+                background: var(--paper);
                 padding: 0;
-                font-size: 9.5px;
-                line-height: 1.4;
+                margin: 0;
+                font-size: 15px;
+                line-height: 1.55;
                 print-color-adjust: exact;
                 -webkit-print-color-adjust: exact;
             }
+            /* the sheet becomes the full A4 surface — paper edge-to-edge,
+               grain intact, generous internal padding like the web card */
             .sheet {
                 max-width: 100%;
                 box-shadow: none;
-                padding: 0;
                 background: var(--paper);
+                padding: 15mm 14mm;
             }
-            .sheet::after { display: none; }
+            .sheet::after { display: block; }   /* keep paper texture */
             .toolbar { display: none; }
             .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+            .live-link .pulse { animation: none; }
 
-            .masthead { padding: 14px 0 14px; gap: 22px; grid-template-columns: 1fr 150px; }
-            .mast-text h1 { font-size: 38px; }
-            .role { font-size: 10px; }
-            .portrait { width: 100%; max-width: 150px; box-shadow: none; }
-            .portrait img { filter: grayscale(0.12) contrast(1.02); }
-            .portrait:hover img { filter: grayscale(0.12) contrast(1.02); }
-
-            .lead { font-size: 11.5px; margin: 16px 0 4px; }
-            .lead .drop { font-size: 44px; }
-            .stats { margin: 16px 0 4px; }
-            .stat { padding: 10px 12px; }
-            .stat .num { font-size: 28px; }
-
-            .section { margin-top: 20px; }
-            .sec-head { margin-bottom: 14px; }
-            .entry { padding: 12px 0 13px; gap: 20px; }
-            .entry li { font-size: 9.5px; margin-bottom: 3px; }
-            .proj p { font-size: 9.5px; }
-
-            /* keep ONLY small atomic units together; never the big containers */
-            .entry, .proj, .info, .ach .item, .folio-cat, .skill-block { break-inside: avoid; }
+            /* graceful pagination — never split an atomic block, keep
+               a heading with its content, don't strand the masthead/stats */
+            .masthead, .stats, .entry, .proj, .info, .ach .item,
+            .folio-cat, .skill-block, .contacts, .live-link { break-inside: avoid; }
             .sec-head { break-after: avoid; }
 
+            /* static output: neutralise hover-only states */
             .proj:hover, .tag:hover, .contact:hover { background: var(--paper); color: inherit; }
             a.contact:hover { background: transparent; color: var(--ink-2); }
-            .live-link .pulse { animation: none; }
+            .portrait:hover img { filter: grayscale(0.32) contrast(1.03) sepia(0.06); }
         }
     </style>
 </head>
