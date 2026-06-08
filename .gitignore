@@ -17,3 +17,7 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Node / PDF tooling
+node_modules/
+chrome/
