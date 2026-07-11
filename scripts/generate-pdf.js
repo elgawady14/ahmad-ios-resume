@@ -72,10 +72,25 @@ function resolveChrome() {
  * edition's print styling collapses its layout, so it renders with 'screen'.
  */
 const EDITIONS = [
-  { id: 'root',      html: 'index.html',                            pdf: 'Ahmad_iOS_TechLead_Resume.pdf',                            media: 'print',  margin: 0 },
-  { id: 'editorial', html: 'versions/2026-06-editorial/index.html', pdf: 'versions/2026-06-editorial/Ahmad_iOS_TechLead_Resume.pdf', media: 'print',  margin: 0 },
+  { id: 'root',      html: 'index.html',                            pdf: 'Ahmad_iOS_TechLead_Resume.pdf',                            media: 'print',  margin: 0, loc: true },
+  { id: 'editorial', html: 'versions/2026-06-editorial/index.html', pdf: 'versions/2026-06-editorial/Ahmad_iOS_TechLead_Resume.pdf', media: 'print',  margin: 0, loc: true },
   { id: 'terminal',  html: 'versions/2026-06-terminal/index.html',  pdf: 'versions/2026-06-terminal/Ahmad_iOS_TechLead_Resume.pdf',  media: 'screen', margin: 9 },
-  { id: 'swiss',     html: 'versions/2026-06-swiss/index.html',     pdf: 'versions/2026-06-swiss/Ahmad_iOS_TechLead_Resume.pdf',     media: 'print',  margin: 8 },
+  { id: 'swiss',     html: 'versions/2026-06-swiss/index.html',     pdf: 'versions/2026-06-swiss/Ahmad_iOS_TechLead_Resume.pdf',     media: 'print',  margin: 8, loc: true },
+
+  // Role-tailored editions (Editorial design, retargeted content) — 2026-07
+  { id: 'mobile-team-lead',   html: 'versions/2026-07-mobile-team-lead/index.html',   pdf: 'versions/2026-07-mobile-team-lead/Ahmad_MobileTeamLead_Resume.pdf',        media: 'print', margin: 0, loc: true },
+  { id: 'senior-mobile-dev',  html: 'versions/2026-07-senior-mobile-dev/index.html',  pdf: 'versions/2026-07-senior-mobile-dev/Ahmad_SeniorMobileDeveloper_Resume.pdf', media: 'print', margin: 0, loc: true },
+  { id: 'engineering-manager',html: 'versions/2026-07-engineering-manager/index.html',pdf: 'versions/2026-07-engineering-manager/Ahmad_EngineeringManager_Resume.pdf',  media: 'print', margin: 0, loc: true },
+  { id: 'cto',                html: 'versions/2026-07-cto/index.html',                pdf: 'versions/2026-07-cto/Ahmad_CTO_Resume.pdf',                                media: 'print', margin: 0, loc: true },
+  { id: 'fullstack',          html: 'versions/2026-07-fullstack/index.html',          pdf: 'versions/2026-07-fullstack/Ahmad_FullstackDeveloper_Resume.pdf',           media: 'print', margin: 0, loc: true },
+
+  // Terminal-design twins of the role editions (linked from each editorial edition's
+  // "live interactive" CTA). Terminal uses screen media + 9mm margin.
+  { id: 'mobile-team-lead-terminal',    html: 'versions/2026-07-mobile-team-lead-terminal/index.html',    pdf: 'versions/2026-07-mobile-team-lead-terminal/Ahmad_MobileTeamLead_Terminal_Resume.pdf',        media: 'screen', margin: 9 },
+  { id: 'senior-mobile-dev-terminal',   html: 'versions/2026-07-senior-mobile-dev-terminal/index.html',   pdf: 'versions/2026-07-senior-mobile-dev-terminal/Ahmad_SeniorMobileDeveloper_Terminal_Resume.pdf', media: 'screen', margin: 9 },
+  { id: 'engineering-manager-terminal', html: 'versions/2026-07-engineering-manager-terminal/index.html', pdf: 'versions/2026-07-engineering-manager-terminal/Ahmad_EngineeringManager_Terminal_Resume.pdf',   media: 'screen', margin: 9 },
+  { id: 'cto-terminal',                 html: 'versions/2026-07-cto-terminal/index.html',                 pdf: 'versions/2026-07-cto-terminal/Ahmad_CTO_Terminal_Resume.pdf',                                 media: 'screen', margin: 9 },
+  { id: 'fullstack-terminal',           html: 'versions/2026-07-fullstack-terminal/index.html',           pdf: 'versions/2026-07-fullstack-terminal/Ahmad_FullstackDeveloper_Terminal_Resume.pdf',           media: 'screen', margin: 9 },
 ];
 
 async function exportEdition(browser, job) {
@@ -86,7 +101,7 @@ async function exportEdition(browser, job) {
   // Render at the printable width with the edition's stylesheet.
   await page.emulateMediaType(job.media);
   await page.setViewport({ width: contentW, height: 1123, deviceScaleFactor: 1 });
-  await page.goto('file://' + path.join(ROOT, job.html), { waitUntil: 'networkidle0' });
+  await page.goto('file://' + path.join(ROOT, job.html) + (job.locParam ? '?loc=' + job.locParam : ''), { waitUntil: 'networkidle0' });
   await new Promise((r) => setTimeout(r, 500)); // let fonts / reveal styles settle
 
   // Measure the full content height, then make Chrome size a SINGLE page that
@@ -129,7 +144,19 @@ async function exportEdition(browser, job) {
   console.log('Chrome: ' + (executablePath || '(puppeteer default)'));
   const browser = await puppeteer.launch({ executablePath, headless: 'new' });
   console.log('Generating ' + jobs.length + ' edition(s):');
-  for (const job of jobs) await exportEdition(browser, job);
+  for (const job of jobs) {
+    if (job.loc) {
+      // Location-aware editions export a Riyadh (default name) and a Cairo PDF.
+      await exportEdition(browser, { ...job, locParam: 'riyadh' });
+      await exportEdition(browser, {
+        ...job,
+        locParam: 'cairo',
+        pdf: job.pdf.replace(/_Resume\.pdf$/, '_Cairo_Resume.pdf'),
+      });
+    } else {
+      await exportEdition(browser, job);
+    }
+  }
   await browser.close();
   console.log('Done.');
 })().catch((err) => {
