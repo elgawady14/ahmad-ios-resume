@@ -16,34 +16,23 @@ Archived, self-contained snapshots of the resume. Each folder holds its own
 The three design editions keep the full iOS Tech Lead content (8 roles, 6 projects, full
 portfolio index, skills, education, honours) and the portrait.
 
-## Role editions (2026-07, Editorial design)
+## Target editions (2026-07, Editorial design)
 
-Content retargeted per job title — headline, summary, emphasis, and skills/projects
-reordered — while staying truthful. Each exports a role-named PDF. The editions are grouped
-into two job families: **iOS roles** and **Mobile roles**.
+Two editions, one per job family — each covers every title in its family (swap the top role
+line per application). Each exports a Riyadh + Cairo PDF.
 
-### iOS roles
+| Family | Covers | Folder | PDF |
+|--------|--------|--------|-----|
+| **iOS** | iOS Tech Lead · iOS Team Lead · Senior iOS Engineer | [`2026-07-ios/`](./2026-07-ios/) | `Ahmad_iOS_Resume.pdf` |
+| **Mobile** | Mobile Architect · Mobile Team Lead (iOS + Android) | [`2026-07-mobile/`](./2026-07-mobile/) | `Ahmad_Mobile_Resume.pdf` |
 
-| Target role | Folder | PDF |
-|--------|--------|-----|
-| **iOS Tech Lead** | [`2026-07-ios-tech-lead/`](./2026-07-ios-tech-lead/) | `Ahmad_iOSTechLead_Resume.pdf` |
-| **iOS Team Lead** | [`2026-07-ios-team-lead/`](./2026-07-ios-team-lead/) | `Ahmad_iOSTeamLead_Resume.pdf` |
-| **Senior iOS Engineer** | [`2026-07-senior-ios-engineer/`](./2026-07-senior-ios-engineer/) | `Ahmad_SeniorIOSEngineer_Resume.pdf` |
+The iOS edition leads with iOS craft/leadership; the Mobile edition leads with cross-platform
+(iOS + Android) breadth. Both keep the solo ride-hailing platform's four-platform "delivery
+timeline" as proof of architectural range.
 
-### Mobile roles
-
-| Target role | Folder | PDF |
-|--------|--------|-----|
-| **Mobile Architect** | [`2026-07-mobile-architect/`](./2026-07-mobile-architect/) | `Ahmad_MobileArchitect_Resume.pdf` |
-| **Mobile Team Lead** | [`2026-07-mobile-team-lead/`](./2026-07-mobile-team-lead/) | `Ahmad_MobileTeamLead_Resume.pdf` |
-
-The iOS-focused editions lead with iOS craft/leadership; the Mobile editions lead with
-cross-platform (iOS + Android) breadth. All five keep the solo ride-hailing platform's
-four-platform "delivery timeline" as proof of architectural range.
-
-Each role edition also has a **terminal-design twin** at `2026-07-<role>-terminal/` carrying the
-same retargeted content in the dark IDE look. The editorial edition's **"See the live interactive
-edition"** button links to its twin.
+Each edition has a **terminal-design twin** at `2026-07-<family>-terminal/` carrying the same
+content in the dark IDE look. The editorial edition's **"See the live interactive edition"**
+button links to its twin.
 
 Each page 1 is packed top-to-bottom — no blank space.
 
