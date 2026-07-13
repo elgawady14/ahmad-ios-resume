@@ -19,15 +19,27 @@ portfolio index, skills, education, honours) and the portrait.
 ## Role editions (2026-07, Editorial design)
 
 Content retargeted per job title — headline, summary, emphasis, and skills/projects
-reordered — while staying truthful. Each exports a role-named PDF.
+reordered — while staying truthful. Each exports a role-named PDF. The editions are grouped
+into two job families: **iOS roles** and **Mobile roles**.
+
+### iOS roles
 
 | Target role | Folder | PDF |
 |--------|--------|-----|
+| **iOS Tech Lead** | [`2026-07-ios-tech-lead/`](./2026-07-ios-tech-lead/) | `Ahmad_iOSTechLead_Resume.pdf` |
+| **iOS Team Lead** | [`2026-07-ios-team-lead/`](./2026-07-ios-team-lead/) | `Ahmad_iOSTeamLead_Resume.pdf` |
+| **Senior iOS Engineer** | [`2026-07-senior-ios-engineer/`](./2026-07-senior-ios-engineer/) | `Ahmad_SeniorIOSEngineer_Resume.pdf` |
+
+### Mobile roles
+
+| Target role | Folder | PDF |
+|--------|--------|-----|
+| **Mobile Architect** | [`2026-07-mobile-architect/`](./2026-07-mobile-architect/) | `Ahmad_MobileArchitect_Resume.pdf` |
 | **Mobile Team Lead** | [`2026-07-mobile-team-lead/`](./2026-07-mobile-team-lead/) | `Ahmad_MobileTeamLead_Resume.pdf` |
-| **Senior Mobile Developer** | [`2026-07-senior-mobile-dev/`](./2026-07-senior-mobile-dev/) | `Ahmad_SeniorMobileDeveloper_Resume.pdf` |
-| **Engineering Manager** | [`2026-07-engineering-manager/`](./2026-07-engineering-manager/) | `Ahmad_EngineeringManager_Resume.pdf` |
-| **CTO** (Engineering Leader · CTO track) | [`2026-07-cto/`](./2026-07-cto/) | `Ahmad_CTO_Resume.pdf` |
-| **Fullstack Developer** | [`2026-07-fullstack/`](./2026-07-fullstack/) | `Ahmad_FullstackDeveloper_Resume.pdf` |
+
+The iOS-focused editions lead with iOS craft/leadership; the Mobile editions lead with
+cross-platform (iOS + Android) breadth. All five keep the solo ride-hailing platform's
+four-platform "delivery timeline" as proof of architectural range.
 
 Each role edition also has a **terminal-design twin** at `2026-07-<role>-terminal/` carrying the
 same retargeted content in the dark IDE look. The editorial edition's **"See the live interactive

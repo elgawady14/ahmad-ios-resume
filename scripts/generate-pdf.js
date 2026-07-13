@@ -78,19 +78,21 @@ const EDITIONS = [
   { id: 'swiss',     html: 'versions/2026-06-swiss/index.html',     pdf: 'versions/2026-06-swiss/Ahmad_iOS_TechLead_Resume.pdf',     media: 'print',  margin: 8, loc: true },
 
   // Role-tailored editions (Editorial design, retargeted content) — 2026-07
+  // iOS family
+  { id: 'ios-tech-lead',      html: 'versions/2026-07-ios-tech-lead/index.html',      pdf: 'versions/2026-07-ios-tech-lead/Ahmad_iOSTechLead_Resume.pdf',              media: 'print', margin: 0, loc: true },
+  { id: 'ios-team-lead',      html: 'versions/2026-07-ios-team-lead/index.html',      pdf: 'versions/2026-07-ios-team-lead/Ahmad_iOSTeamLead_Resume.pdf',              media: 'print', margin: 0, loc: true },
+  { id: 'senior-ios-engineer',html: 'versions/2026-07-senior-ios-engineer/index.html',pdf: 'versions/2026-07-senior-ios-engineer/Ahmad_SeniorIOSEngineer_Resume.pdf',  media: 'print', margin: 0, loc: true },
+  // Mobile family
+  { id: 'mobile-architect',   html: 'versions/2026-07-mobile-architect/index.html',   pdf: 'versions/2026-07-mobile-architect/Ahmad_MobileArchitect_Resume.pdf',       media: 'print', margin: 0, loc: true },
   { id: 'mobile-team-lead',   html: 'versions/2026-07-mobile-team-lead/index.html',   pdf: 'versions/2026-07-mobile-team-lead/Ahmad_MobileTeamLead_Resume.pdf',        media: 'print', margin: 0, loc: true },
-  { id: 'senior-mobile-dev',  html: 'versions/2026-07-senior-mobile-dev/index.html',  pdf: 'versions/2026-07-senior-mobile-dev/Ahmad_SeniorMobileDeveloper_Resume.pdf', media: 'print', margin: 0, loc: true },
-  { id: 'engineering-manager',html: 'versions/2026-07-engineering-manager/index.html',pdf: 'versions/2026-07-engineering-manager/Ahmad_EngineeringManager_Resume.pdf',  media: 'print', margin: 0, loc: true },
-  { id: 'cto',                html: 'versions/2026-07-cto/index.html',                pdf: 'versions/2026-07-cto/Ahmad_CTO_Resume.pdf',                                media: 'print', margin: 0, loc: true },
-  { id: 'fullstack',          html: 'versions/2026-07-fullstack/index.html',          pdf: 'versions/2026-07-fullstack/Ahmad_FullstackDeveloper_Resume.pdf',           media: 'print', margin: 0, loc: true },
 
   // Terminal-design twins of the role editions (linked from each editorial edition's
   // "live interactive" CTA). Terminal uses screen media + 9mm margin.
+  { id: 'ios-tech-lead-terminal',       html: 'versions/2026-07-ios-tech-lead-terminal/index.html',       pdf: 'versions/2026-07-ios-tech-lead-terminal/Ahmad_iOSTechLead_Terminal_Resume.pdf',             media: 'screen', margin: 9 },
+  { id: 'ios-team-lead-terminal',       html: 'versions/2026-07-ios-team-lead-terminal/index.html',       pdf: 'versions/2026-07-ios-team-lead-terminal/Ahmad_iOSTeamLead_Terminal_Resume.pdf',             media: 'screen', margin: 9 },
+  { id: 'senior-ios-engineer-terminal', html: 'versions/2026-07-senior-ios-engineer-terminal/index.html', pdf: 'versions/2026-07-senior-ios-engineer-terminal/Ahmad_SeniorIOSEngineer_Terminal_Resume.pdf', media: 'screen', margin: 9 },
+  { id: 'mobile-architect-terminal',    html: 'versions/2026-07-mobile-architect-terminal/index.html',    pdf: 'versions/2026-07-mobile-architect-terminal/Ahmad_MobileArchitect_Terminal_Resume.pdf',       media: 'screen', margin: 9 },
   { id: 'mobile-team-lead-terminal',    html: 'versions/2026-07-mobile-team-lead-terminal/index.html',    pdf: 'versions/2026-07-mobile-team-lead-terminal/Ahmad_MobileTeamLead_Terminal_Resume.pdf',        media: 'screen', margin: 9 },
-  { id: 'senior-mobile-dev-terminal',   html: 'versions/2026-07-senior-mobile-dev-terminal/index.html',   pdf: 'versions/2026-07-senior-mobile-dev-terminal/Ahmad_SeniorMobileDeveloper_Terminal_Resume.pdf', media: 'screen', margin: 9 },
-  { id: 'engineering-manager-terminal', html: 'versions/2026-07-engineering-manager-terminal/index.html', pdf: 'versions/2026-07-engineering-manager-terminal/Ahmad_EngineeringManager_Terminal_Resume.pdf',   media: 'screen', margin: 9 },
-  { id: 'cto-terminal',                 html: 'versions/2026-07-cto-terminal/index.html',                 pdf: 'versions/2026-07-cto-terminal/Ahmad_CTO_Terminal_Resume.pdf',                                 media: 'screen', margin: 9 },
-  { id: 'fullstack-terminal',           html: 'versions/2026-07-fullstack-terminal/index.html',           pdf: 'versions/2026-07-fullstack-terminal/Ahmad_FullstackDeveloper_Terminal_Resume.pdf',           media: 'screen', margin: 9 },
 ];
 
 async function exportEdition(browser, job) {

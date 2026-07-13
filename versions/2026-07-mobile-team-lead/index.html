@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmad Abdul-Jawad Mahmoud — Mobile Team Lead · iOS · 12+ Years · 30+ Apps</title>
-    <meta name="description" content="Mobile Team Lead with 12+ years leading iOS teams — mentoring, delivery, and architecture — shipping high-performance apps used by millions across the MENA region.">
+    <title>Ahmad Abdul-Jawad Mahmoud — Mobile Team Lead · iOS & Android · 12+ Years · 30+ Apps</title>
+    <meta name="description" content="Mobile Team Lead with 12+ years leading iOS &amp; Android teams — mentoring, delivery, and architecture — shipping high-performance apps used by millions across the MENA region.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -455,6 +455,79 @@
             background: var(--accent);
         }
 
+        /* Lead / closing narrative lines around the platform timeline */
+        .entry .lead {
+            margin-top: 11px;
+            color: var(--ink-2);
+            font-size: 13.5px;
+            line-height: 1.5;
+        }
+        .entry .lead b, .entry .close b { color: var(--ink); font-weight: 600; }
+        .entry .close {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid var(--line);
+            color: var(--ink-3);
+            font-family: var(--mono);
+            font-size: 11px;
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+        }
+
+        /* Four-platform "delivery timeline" — a print-safe mini-gantt. */
+        .entry .tracks {
+            margin-top: 14px;
+            border-top: 1px solid var(--line-2);
+        }
+        .entry .track {
+            display: grid;
+            grid-template-columns: 172px 1fr;
+            gap: 18px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--line);
+            align-items: start;
+        }
+        .entry .track .plat {
+            font-family: var(--mono);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: var(--ink);
+        }
+        .entry .track .per {
+            display: block;
+            margin-top: 4px;
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: 0.03em;
+            color: var(--ink-3);
+        }
+        .entry .track .bar {
+            position: relative;
+            height: 4px;
+            margin: 6px 0 9px;
+            background: rgba(27, 26, 22, 0.09);
+            border-radius: 2px;
+        }
+        .entry .track .bar > i {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            background: var(--accent);
+            border-radius: 2px;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+        .entry .track .desc {
+            color: var(--ink-2);
+            font-size: 12.5px;
+            line-height: 1.46;
+        }
+        .entry .track .desc b { color: var(--ink); font-weight: 600; }
+        @media (max-width: 640px) {
+            .entry .track { grid-template-columns: 1fr; gap: 7px; }
+        }
+
         /* ============================================================
            PROJECTS — numbered ledger cards
            ============================================================ */
@@ -789,7 +862,7 @@
                     <span class="family">Mahmoud</span>
                 </h1>
                 <div class="role-bar">
-                    <div class="role">Mobile Team Lead <span class="sep">/</span> iOS Architect <span class="sep">/</span> Mentor</div>
+                    <div class="role">Mobile Team Lead <span class="sep">/</span> iOS &amp; Android <span class="sep">/</span> Mentor</div>
                     <div class="tenure">Cairo ⟶ Riyadh · 12+ Years in the Field</div>
                 </div>
             </div>
@@ -821,11 +894,11 @@
         <!-- ===================== LEAD ===================== -->
         <p class="lead reveal d2">
             <span class="drop">M</span>obile Team Lead with <strong>12+ years</strong> building and leading
-            iOS teams that ship at scale. I grow engineers through <strong>mentoring and code review</strong>,
+            iOS &amp; Android teams that ship at scale. I grow engineers through <strong>mentoring and code review</strong>,
             own the technical roadmap and delivery, and architect the systems behind them — from an
             enterprise POS used by <span class="underline">20k+ restaurants</span> to ride-hailing and
             delivery apps serving millions across the MENA region. Full-stack range when it counts,
-            with a production platform built end-to-end on SwiftUI and a hardened NestJS / PostgreSQL backend.
+            with a production platform built end-to-end on native iOS &amp; Android and a hardened NestJS / PostgreSQL backend.
         </p>
 
         <!-- ===================== STATS ===================== -->
@@ -898,20 +971,44 @@
 
                 <article class="entry">
                     <div class="when">
-                        Jun 2025 — Dec 2025
+                        Jan 2025 — Jun 2026
                         <span class="place">Independent</span>
                     </div>
                     <div class="what">
-                        <div class="title">Full-Stack Architect — iOS &amp; Backend</div>
+                        <div class="title">Full-Stack Platform Architect — iOS · Android · Backend · Web</div>
                         <div class="org">Ride-Hailing Platform · Independent Project</div>
-                        <ul>
-                            <li>Architected a production-grade ride-hailing platform from scratch end-to-end — SwiftUI client paired with a NestJS / TypeScript backend, PostgreSQL (TypeORM migrations), and Redis.</li>
-                            <li>Designed stateless auth with JWT access/refresh tokens, OTP phone verification via Twilio, Passport strategies, and multi-device session management.</li>
-                            <li>Hardened for production: Helmet headers, multi-tier rate limiting, a global idempotency interceptor for safe retries, and centralized exception filters.</li>
-                            <li>Built an append-only audit-logging subsystem for compliance and traceability of sensitive operations.</li>
-                            <li>Delivered scheduled background services for session expiry, OTP cleanup, and soft-deleted account purging.</li>
-                            <li>Documented the API with Swagger/OpenAPI and shipped a full Jest unit + e2e suite with CI-ready coverage.</li>
-                        </ul>
+                        <p class="lead">Founded, architected, and shipped <b>four native mobile apps</b> (Rider &amp; Driver on iOS + Android) plus their backend and ops console <b>solo</b> — <b>owning every layer</b> from data model to release, and setting the engineering standards: idempotent mutations, double-entry accounting, acyclic module boundaries, and a CI test suite.</p>
+                        <div class="tracks">
+                            <div class="track">
+                                <div><span class="plat">Backend APIs</span><span class="per">NestJS · TypeScript · Jan ’25 → Jun ’26</span></div>
+                                <div>
+                                    <div class="bar"><i style="left:0%;width:100%"></i></div>
+                                    <div class="desc">Modular monolith, ~17 domains — <b>trip state machine</b>, <b>scored dispatch</b> over a Redis geo index, <b>double-entry ledger</b>, realtime rider/driver/admin <b>sockets</b>, JWT + phone-OTP, idempotency &amp; audit log · <b>1,150+ tests</b>, Swagger docs.</div>
+                                </div>
+                            </div>
+                            <div class="track">
+                                <div><span class="plat">iOS Apps · Rider &amp; Driver</span><span class="per">SwiftUI · Mar ’25 → Jun ’26</span></div>
+                                <div>
+                                    <div class="bar"><i style="left:11%;width:89%"></i></div>
+                                    <div class="desc">Two native <b>SwiftUI</b> apps — live GPS <b>trip lifecycle</b>, realtime sockets, in-app chat, payments, and driver earnings &amp; turn-by-turn navigation.</div>
+                                </div>
+                            </div>
+                            <div class="track">
+                                <div><span class="plat">Admin Console</span><span class="per">Next.js 14 · May ’25 → Jun ’26</span></div>
+                                <div>
+                                    <div class="bar"><i style="left:22%;width:78%"></i></div>
+                                    <div class="desc">Bespoke <b>19-screen</b> ops surface — live <b>MapLibre</b> trips map, dispatch/SOS live boards, KYC review, finance reconciliation, refunds/payouts, map <b>zone editor</b>, <b>Google SSO</b>.</div>
+                                </div>
+                            </div>
+                            <div class="track">
+                                <div><span class="plat">Android Apps · Rider &amp; Driver</span><span class="per">Kotlin · Jetpack Compose · Aug ’25 → Jun ’26</span></div>
+                                <div>
+                                    <div class="bar"><i style="left:39%;width:61%"></i></div>
+                                    <div class="desc">Native <b>Kotlin / Compose</b> parity for both apps — same trip lifecycle, realtime tracking, chat, and payments across <b>one shared API contract</b>.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="close">One backend · one contract · four clients — plus growth loops (promotions, referrals, loyalty tiers, wallet), driver safety/SOS, and scheduled reconciliation jobs, shipped end-to-end.</p>
                     </div>
                 </article>
 
@@ -1005,9 +1102,9 @@
 
                 <article class="proj">
                     <div class="idx">02 — FULL-STACK</div>
-                    <h3>Ride-Hailing Platform <span style="font-family:var(--mono);font-size:11px;color:var(--ink-3)">(built from scratch)</span></h3>
-                    <div class="tech">SwiftUI · NestJS · TypeScript · PostgreSQL · TypeORM · Redis · JWT · Twilio</div>
-                    <p>End-to-end ride-hailing system architected solo: a SwiftUI client plus a hardened NestJS backend with OTP auth, JWT sessions, multi-tier rate limiting, idempotent mutations, audit logging, and scheduled cleanup jobs.</p>
+                    <h3>Ride-Hailing Platform <span style="font-family:var(--mono);font-size:11px;color:var(--ink-3)">(built from scratch · Jan 2025 – Jun 2026)</span></h3>
+                    <div class="tech">SwiftUI · Kotlin · Jetpack Compose · NestJS · TypeScript · PostgreSQL · Redis · Socket.IO · Next.js</div>
+                    <p>End-to-end ride-hailing platform architected solo: <strong>four native apps</strong> (Rider &amp; Driver on iOS/SwiftUI and Android/Kotlin·Compose), a hardened NestJS backend (trip state machine, scored dispatch, double-entry ledger, realtime sockets, 1,150+ tests), and a real-time Next.js operations console.</p>
                     <div class="meta"><span class="dot">◆</span> Full-Stack Ownership · Production Security</div>
                 </article>
 
@@ -1079,6 +1176,17 @@
                             <span class="tag">async/await</span>
                             <span class="tag">SwiftData</span>
                             <span class="tag">iOS 18+</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Android — 2025 <span>native</span></h4>
+                        <div class="tags">
+                            <span class="tag hot">Kotlin</span>
+                            <span class="tag hot">Jetpack Compose</span>
+                            <span class="tag">Coroutines</span>
+                            <span class="tag">Flow</span>
+                            <span class="tag">MVVM</span>
                         </div>
                     </div>
 
@@ -1283,7 +1391,7 @@
                     <div class="ach">
                         <div class="item"><span class="n">01</span><span class="t">Built a food-delivery platform serving <b>20M+ users</b> across Saudi Arabia and Bahrain.</span></div>
                         <div class="item"><span class="n">02</span><span class="t">Built a ride-hailing ecosystem serving <b>15M+ users</b> in Saudi Arabia.</span></div>
-                        <div class="item"><span class="n">03</span><span class="t">Architected a <b>full-stack ride-hailing platform solo</b> — iOS + NestJS/PostgreSQL with OTP auth, sessions, rate limiting, and audit logging.</span></div>
+                        <div class="item"><span class="n">03</span><span class="t">Architected a <b>full-stack ride-hailing platform solo</b> — four native apps (iOS + Android), a NestJS/PostgreSQL backend, and a Next.js ops console, with idempotent APIs and double-entry accounting.</span></div>
                         <div class="item"><span class="n">04</span><span class="t">Led a POS system serving <b>20k+ restaurants</b> and cafés.</span></div>
                         <div class="item"><span class="n">05</span><span class="t"><b>10+ apps</b> published on the App Store, used by millions across MENA.</span></div>
                         <div class="item"><span class="n">06</span><span class="t"><b>30+ iOS projects</b> delivered across a 12-year career.</span></div>
