@@ -72,7 +72,7 @@ function resolveChrome() {
  * edition's print styling collapses its layout, so it renders with 'screen'.
  */
 const EDITIONS = [
-  { id: 'root',      html: 'index.html',                            pdf: 'Ahmad_iOS_TechLead_Resume.pdf',                            media: 'print',  margin: 0, loc: true },
+  { id: 'root',      html: 'index.html',                            pdf: 'Ahmad_iOS_Resume.pdf',                                     media: 'print',  margin: 0, loc: true },
   { id: 'editorial', html: 'versions/2026-06-editorial/index.html', pdf: 'versions/2026-06-editorial/Ahmad_iOS_TechLead_Resume.pdf', media: 'print',  margin: 0, loc: true },
   { id: 'terminal',  html: 'versions/2026-06-terminal/index.html',  pdf: 'versions/2026-06-terminal/Ahmad_iOS_TechLead_Resume.pdf',  media: 'screen', margin: 9 },
   { id: 'swiss',     html: 'versions/2026-06-swiss/index.html',     pdf: 'versions/2026-06-swiss/Ahmad_iOS_TechLead_Resume.pdf',     media: 'print',  margin: 8, loc: true },

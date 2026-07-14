@@ -51,5 +51,5 @@ A small inline script (keyed off the `.k` contact labels) drives it; the locatio
 in one place per file.
 
 The root `index.html` (served on GitHub Pages) mirrors whichever version is live
-(currently **Editorial**). To switch the live design, copy a version's `index.html`,
-`assets/`, and PDF up to the repo root.
+(currently the **iOS** resume — `2026-07-ios/`, exported to the root as `Ahmad_iOS_Resume.pdf`).
+To switch the live edition, copy a version's `index.html`, `assets/`, and PDF up to the repo root.

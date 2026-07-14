@@ -61,7 +61,7 @@ Senior iOS Tech Lead with **11+ years** of experience leading mobile development
 ## 📄 Resume
 
 - **[📱 View Interactive Resume](https://ahmadabdulgawadmahmoud.github.io/ahmad-ios-resume/)** (GitHub Pages)
-- **[📋 Download PDF Resume](./Ahmad_iOS_TechLead_Resume.pdf)**
+- **[📋 Download PDF Resume](./Ahmad_iOS_Resume.pdf)**
 
 ## 🎓 Education & Certifications
 
@@ -92,7 +92,7 @@ Senior iOS Tech Lead with **11+ years** of experience leading mobile development
 
 ```
 ├── index.html                     # Interactive HTML Resume (GitHub Pages)
-├── Ahmad_iOS_TechLead_Resume.pdf   # PDF Resume Download
+├── Ahmad_iOS_Resume.pdf            # PDF Resume Download
 └── README.md                      # This documentation
 ```
 

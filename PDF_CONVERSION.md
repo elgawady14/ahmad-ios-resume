@@ -16,7 +16,7 @@ you change an `index.html`, you regenerate the PDFs with one command.
 
 | id (CLI)    | Source HTML                            | Output PDF                                                   | Stylesheet | Margin |
 |-------------|----------------------------------------|-------------------------------------------------------------|------------|--------|
-| `root`      | `index.html`                           | `Ahmad_iOS_TechLead_Resume.pdf`                             | `print`    | 0 mm   |
+| `root`      | `index.html`                           | `Ahmad_iOS_Resume.pdf`                             | `print`    | 0 mm   |
 | `editorial` | `versions/2026-06-editorial/index.html`| `versions/2026-06-editorial/Ahmad_iOS_TechLead_Resume.pdf` | `print`    | 0 mm   |
 | `terminal`  | `versions/2026-06-terminal/index.html` | `versions/2026-06-terminal/Ahmad_iOS_TechLead_Resume.pdf`  | `screen`   | 9 mm   |
 | `swiss`     | `versions/2026-06-swiss/index.html`    | `versions/2026-06-swiss/Ahmad_iOS_TechLead_Resume.pdf`     | `print`    | 8 mm   |
@@ -75,7 +75,7 @@ Sample output:
 ```
 Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
 Generating 4 edition(s):
-  root       → Ahmad_iOS_TechLead_Resume.pdf
+  root       → Ahmad_iOS_Resume.pdf
              pages=1 ✓  box=[0 0 594.95996 4169.04]  contentH=5559px
   ...
 Done.
