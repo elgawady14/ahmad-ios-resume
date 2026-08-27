@@ -21,3 +21,8 @@ Thumbs.db
 # Node / PDF tooling
 node_modules/
 chrome/
+# Interview prep — private, local only. Never publish to the Pages site.
+INTERVIEW_PREP.md
+interview-prep*.html
+interview-suite.html
+interview-suite/
