@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Abdul-Jawad Mahmoud — Technical Lead · Staff Engineer · Architect · 12+ Years</title>
+    <meta name="description" content="Technical Lead / Staff Engineer / Architect — 12+ years hands-on, 8+ leading. Owns architecture and the technical standards a team ships against, and still writes the hard parts. Seven years as technical lead on a POS platform serving 20k+ businesses, plus a production ride-hailing platform architected solo across iOS, Android, backend and web.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:ital,wght@0,300..800;1,400..600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           AHMAD ABDUL-JAWAD MAHMOUD — CURRICULUM VITÆ
+           "Editorial Engineering Dossier" · a broadsheet for a build career
+           ============================================================ */
+
+        :root {
+            --paper:   #f1ebdd;   /* warm bone */
+            --paper-2: #e8e0cd;   /* deeper panel */
+            --desk:    #ddd2ba;   /* screen surround */
+            --ink:     #1b1a16;   /* near-black, warm */
+            --ink-2:   #45413a;   /* secondary text */
+            --ink-3:   #726c5f;   /* faint / captions */
+            --accent:  #9a2b25;   /* oxblood */
+            --accent-d:#741f1b;   /* deep oxblood */
+            --ochre:   #a9742a;   /* gold tick */
+            --line:    rgba(27,26,22,0.16);
+            --line-2:  rgba(27,26,22,0.28);
+
+            --serif: "Fraunces", Georgia, "Times New Roman", serif;
+            --sans:  "Hanken Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+            --mono:  "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        ::selection { background: var(--accent); color: var(--paper); }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--sans);
+            background: var(--desk);
+            color: var(--ink);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            padding: clamp(0px, 4vw, 56px) 0;
+        }
+
+        ::selection { background: var(--accent); color: var(--paper); }
+
+        /* ---- The sheet ---------------------------------------------- */
+        .sheet {
+            position: relative;
+            max-width: 940px;
+            margin: 0 auto;
+            background: var(--paper);
+            padding: clamp(26px, 5vw, 64px);
+            box-shadow:
+                0 1px 0 rgba(255,255,255,0.5) inset,
+                0 40px 80px -40px rgba(27,26,22,0.45),
+                0 2px 8px rgba(27,26,22,0.10);
+            overflow: hidden;
+        }
+
+        /* paper grain / texture overlay */
+        .sheet::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.55;
+            mix-blend-mode: multiply;
+            background-image: url("assets/grain.png");
+            background-size: 240px 240px;
+            background-repeat: repeat;
+        }
+        .sheet > * { position: relative; z-index: 1; }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* ============================================================
+           MASTHEAD
+           ============================================================ */
+        .dateline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            font-family: var(--mono);
+            font-size: 10.5px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--ink-2);
+            padding-bottom: 11px;
+            border-bottom: 1.5px solid var(--ink);
+        }
+        .dateline .edition { color: var(--accent); font-weight: 600; }
+        .dateline span:nth-child(2) { text-align: center; flex: 1; }
+
+        .masthead {
+            border-bottom: 4px double var(--ink);
+            padding: 24px 0 22px;
+            display: grid;
+            grid-template-columns: 1fr 188px;   /* fixed portrait track — never let the image balloon */
+            gap: 34px;
+            align-items: center;
+        }
+
+        .mast-text { min-width: 0; }
+
+        .mast-text h1 {
+            font-family: var(--serif);
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-size: clamp(38px, 7vw, 74px);
+            line-height: 0.92;
+            letter-spacing: -0.025em;
+            color: var(--ink);
+        }
+        .mast-text h1 .given { display: block; }
+        .mast-text h1 .family {
+            display: block;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--accent);
+        }
+
+        .role-bar {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            margin-top: 16px;
+        }
+        .role {
+            font-family: var(--mono);
+            font-size: 12.5px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--ink);
+        }
+        .role .sep { color: var(--accent); margin: 0 5px; }
+        .tenure {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+        }
+
+        /* portrait */
+        .portrait {
+            position: relative;
+            width: 100%;           /* fills the fixed 188px masthead track */
+            max-width: 188px;
+            flex: none;
+            padding: 7px;
+            background: var(--paper);
+            border: 1.5px solid var(--ink);
+            box-shadow: 0 22px 44px -26px rgba(27,26,22,0.65);
+        }
+        .portrait::before {
+            /* registration tick, top-left */
+            content: "";
+            position: absolute;
+            top: -1.5px; left: -1.5px;
+            width: 16px; height: 16px;
+            border-top: 3px solid var(--accent);
+            border-left: 3px solid var(--accent);
+        }
+        .portrait::after {
+            content: "";
+            position: absolute;
+            bottom: -1.5px; right: -1.5px;
+            width: 16px; height: 16px;
+            border-bottom: 3px solid var(--accent);
+            border-right: 3px solid var(--accent);
+        }
+        .portrait img {
+            display: block;
+            width: 100%;
+            height: auto;          /* image is pre-cropped to 4:5; render natural */
+            filter: grayscale(0.32) contrast(1.03) sepia(0.06);
+            transition: filter 0.6s ease;
+        }
+        .portrait:hover img { filter: grayscale(0) contrast(1) sepia(0); }
+        .portrait .cap {
+            position: absolute;
+            left: 7px; bottom: 7px; right: 7px;
+            padding: 5px 8px;
+            background: rgba(27,26,22,0.82);
+            color: var(--paper);
+            font-family: var(--mono);
+            font-size: 8.5px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            backdrop-filter: blur(2px);
+        }
+        .portrait .cap b { color: var(--ochre); font-weight: 500; }
+
+        /* contact row */
+        .contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: 18px;
+            border: 1px solid var(--line-2);
+        }
+        .contact {
+            flex: 1 1 50%;
+            min-width: 0;
+            padding: 10px 16px;
+            border-right: 1px solid var(--line-2);
+            font-family: var(--mono);
+            font-size: 11.5px;
+            color: var(--ink-2);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+        .contact:last-child { border-right: none; }
+        .contact .k {
+            display: block;
+            font-size: 8.5px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin-bottom: 3px;
+        }
+        a.contact:hover { background: var(--ink); color: var(--paper); }
+        a.contact:hover .k { color: var(--ochre); }
+
+        /* live / interactive edition link */
+        .live-link {
+            margin-top: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--mono);
+            font-size: 11.5px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 9px 15px;
+            border-radius: 2px;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+        .live-link:hover { background: var(--accent); color: var(--paper); }
+        .live-link .pulse {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: var(--accent);
+            animation: pls 1.8s ease-out infinite;
+        }
+        .live-link:hover .pulse { background: var(--paper); }
+        @keyframes pls {
+            0%   { box-shadow: 0 0 0 0 rgba(154,43,37,0.5); }
+            70%  { box-shadow: 0 0 0 7px rgba(154,43,37,0); }
+            100% { box-shadow: 0 0 0 0 rgba(154,43,37,0); }
+        }
+        .live-link .arr { margin-left: 1px; transition: transform 0.25s ease; }
+        .live-link:hover .arr { transform: translate(2px,-2px); }
+
+        /* ============================================================
+           LEAD / SUMMARY
+           ============================================================ */
+        .lead {
+            margin: 28px 0 6px;
+            font-family: var(--serif);
+            font-optical-sizing: auto;
+            font-weight: 340;
+            font-size: clamp(17px, 2.3vw, 20px);
+            line-height: 1.5;
+            color: var(--ink);
+        }
+        .lead .drop {
+            float: left;
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 72px;
+            line-height: 0.72;
+            padding: 8px 14px 0 0;
+            margin-top: 6px;
+            color: var(--accent);
+        }
+        .lead strong { font-weight: 600; }
+        .lead .underline {
+            background-image: linear-gradient(var(--ochre), var(--ochre));
+            background-size: 100% 1.5px;
+            background-repeat: no-repeat;
+            background-position: 0 92%;
+            padding-bottom: 1px;
+        }
+
+        /* ============================================================
+           STAT BAND
+           ============================================================ */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin: 30px 0 8px;
+            border-top: 1.5px solid var(--ink);
+            border-bottom: 1.5px solid var(--ink);
+        }
+        .stat {
+            padding: 16px 14px 14px;
+            border-right: 1px solid var(--line);
+            text-align: left;
+        }
+        .stat:last-child { border-right: none; }
+        .stat .num {
+            font-family: var(--serif);
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-size: clamp(32px, 5.4vw, 48px);
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+        }
+        .stat .num em {
+            font-style: italic;
+            color: var(--accent);
+            font-weight: 400;
+        }
+        .stat .lbl {
+            margin-top: 8px;
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            line-height: 1.4;
+        }
+
+        /* ============================================================
+           LEADERSHIP CHARTER — the scope of the job, stated plainly
+           ============================================================ */
+        .charter {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-top: 1px solid var(--line);
+            border-left: 1px solid var(--line);
+        }
+        .charter .card {
+            padding: 17px 20px 19px;
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .charter .card .n {
+            font-family: var(--mono);
+            font-size: 9.5px;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+        .charter .card h3 {
+            font-family: var(--serif);
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-size: 19px;
+            letter-spacing: -0.01em;
+            margin: 5px 0 7px;
+            color: var(--ink);
+        }
+        .charter .card p {
+            font-size: 12.8px;
+            line-height: 1.6;
+            color: var(--ink-2);
+        }
+        .charter .card p b { color: var(--ink); font-weight: 600; }
+
+        /* ============================================================
+           SECTION HEADERS
+           ============================================================ */
+        .section { margin-top: 42px; }
+        .sec-head {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .sec-head .num {
+            font-family: var(--mono);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            flex: none;
+        }
+        .sec-head h2 {
+            font-family: var(--serif);
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-size: clamp(22px, 3.2vw, 29px);
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            flex: none;
+        }
+        .sec-head .rule {
+            flex: 1;
+            height: 0;
+            border-top: 1.5px solid var(--ink);
+            transform: translateY(-5px);
+        }
+
+        /* ============================================================
+           EXPERIENCE — broadsheet entries on a rule
+           ============================================================ */
+        .xp { border-top: 1px solid var(--line); }
+        .entry {
+            display: grid;
+            grid-template-columns: 148px 1fr;
+            gap: 26px;
+            padding: 20px 0 22px;
+            border-bottom: 1px solid var(--line);
+        }
+        .entry .when {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            color: var(--ink-2);
+            padding-top: 5px;
+        }
+        .entry .when .now {
+            display: inline-block;
+            margin-top: 9px;
+            padding: 2px 8px;
+            background: var(--accent);
+            color: var(--paper);
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            border-radius: 2px;
+        }
+        .entry .when .place {
+            display: block;
+            margin-top: 9px;
+            color: var(--ink-3);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .entry .title {
+            font-family: var(--serif);
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 1.18;
+            color: var(--ink);
+        }
+        .entry .org {
+            margin-top: 4px;
+            font-family: var(--mono);
+            font-size: 12px;
+            letter-spacing: 0.03em;
+            color: var(--accent);
+            font-weight: 500;
+        }
+        .entry .org a {
+            border-bottom: 1px solid rgba(154,43,37,0.35);
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .entry .org a:hover { color: var(--accent-d); border-color: var(--accent-d); }
+        .entry .org a::after { content: " ↗"; font-size: 10px; opacity: 0.6; }
+
+        .entry ul { list-style: none; margin-top: 12px; }
+        .entry li {
+            position: relative;
+            padding-left: 19px;
+            margin-bottom: 6px;
+            color: var(--ink-2);
+            font-size: 13.5px;
+            line-height: 1.48;
+        }
+        .entry li::before {
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 9px;
+            width: 7px;
+            height: 1.5px;
+            background: var(--accent);
+        }
+
+        /* Lead / closing narrative lines around the platform timeline */
+        .entry .lead {
+            margin-top: 11px;
+            color: var(--ink-2);
+            font-size: 13.5px;
+            line-height: 1.5;
+        }
+        .entry .lead b, .entry .close b { color: var(--ink); font-weight: 600; }
+        .entry .close {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid var(--line);
+            color: var(--ink-3);
+            font-family: var(--mono);
+            font-size: 11px;
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+        }
+
+        /* Four-platform "delivery timeline" — a print-safe mini-gantt. */
+        .entry .tracks {
+            margin-top: 14px;
+            border-top: 1px solid var(--line-2);
+        }
+        .entry .track {
+            display: grid;
+            grid-template-columns: 172px 1fr;
+            gap: 18px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--line);
+            align-items: start;
+        }
+        .entry .track .plat {
+            font-family: var(--mono);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: var(--ink);
+        }
+        .entry .track .per {
+            display: block;
+            margin-top: 4px;
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: 0.03em;
+            color: var(--ink-3);
+        }
+        .entry .track .bar {
+            position: relative;
+            height: 4px;
+            margin: 6px 0 9px;
+            background: rgba(27, 26, 22, 0.09);
+            border-radius: 2px;
+        }
+        .entry .track .bar > i {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            background: var(--accent);
+            border-radius: 2px;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+        .entry .track .desc {
+            color: var(--ink-2);
+            font-size: 12.5px;
+            line-height: 1.46;
+        }
+        .entry .track .desc b { color: var(--ink); font-weight: 600; }
+        @media (max-width: 640px) {
+            .entry .track { grid-template-columns: 1fr; gap: 7px; }
+        }
+
+        /* ============================================================
+           PROJECTS — numbered ledger cards
+           ============================================================ */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+        .proj {
+            background: var(--paper);
+            padding: 18px 18px 20px;
+            position: relative;
+            transition: background 0.3s ease;
+        }
+        .proj:hover { background: var(--paper-2); }
+        .proj .idx {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            color: var(--ink-3);
+        }
+        .proj h3 {
+            font-family: var(--serif);
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 1.15;
+            margin: 6px 0 8px;
+            color: var(--ink);
+        }
+        .proj h3 a {
+            border-bottom: 1.5px solid var(--ochre);
+            transition: color 0.2s;
+        }
+        .proj h3 a:hover { color: var(--accent); }
+        .proj .tech {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.02em;
+            color: var(--accent);
+            line-height: 1.5;
+            margin-bottom: 9px;
+        }
+        .proj p {
+            font-size: 12.5px;
+            line-height: 1.48;
+            color: var(--ink-2);
+        }
+        .proj .meta {
+            margin-top: 11px;
+            padding-top: 9px;
+            border-top: 1px solid var(--line);
+            font-family: var(--mono);
+            font-size: 10.5px;
+            letter-spacing: 0.04em;
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .proj .meta .dot { color: var(--ochre); }
+
+        /* ============================================================
+           TWO-COLUMN LOWER GRID
+           ============================================================ */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1.55fr 1fr;
+            gap: 46px;
+            margin-top: 42px;
+        }
+        @media (max-width: 720px) {
+            .grid-2 { grid-template-columns: 1fr; gap: 0; }
+        }
+
+        /* skills as typographic index */
+        .skill-block { margin-bottom: 22px; }
+        .skill-block h4 {
+            font-family: var(--mono);
+            font-size: 10.5px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--ink);
+            margin-bottom: 11px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+        }
+        .skill-block h4 span { color: var(--accent); }
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .tag {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.01em;
+            color: var(--ink-2);
+            padding: 4px 9px;
+            border: 1px solid var(--line-2);
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+        .tag:hover {
+            background: var(--ink);
+            color: var(--paper);
+            border-color: var(--ink);
+        }
+        .tag.hot { border-color: var(--accent); color: var(--accent); }
+        .tag.hot:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+
+        /* portfolio index list */
+        .folio { columns: 2; column-gap: 30px; }
+        @media (max-width: 720px) { .folio { columns: 1; } }
+        .folio-cat { break-inside: avoid; margin-bottom: 17px; }
+        .folio-cat .h {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink);
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 4px;
+            margin-bottom: 7px;
+        }
+        .folio-cat .items { font-size: 12px; line-height: 1.7; color: var(--ink-2); }
+        .folio-cat .items a {
+            border-bottom: 1px solid var(--line-2);
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .folio-cat .items a:hover { color: var(--accent); border-color: var(--accent); }
+        .folio-cat .items .muted { color: var(--ink-3); font-style: italic; }
+
+        /* info cards (education / certs / langs) */
+        .info { margin-bottom: 22px; }
+        .info .h {
+            font-family: var(--mono);
+            font-size: 10.5px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .info .body {
+            border-left: 2px solid var(--ink);
+            padding-left: 14px;
+        }
+        .info .deg {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--ink);
+            line-height: 1.2;
+        }
+        .info .sub { font-size: 12.5px; color: var(--ink-2); margin-top: 3px; }
+        .info .hl {
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--accent);
+            margin-top: 5px;
+        }
+        .info .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            font-size: 13px;
+            border-bottom: 1px dotted var(--line-2);
+        }
+        .info .row:last-child { border-bottom: none; }
+        .info .row .lng { font-weight: 600; color: var(--ink); }
+        .info .row .lvl { font-family: var(--mono); font-size: 11px; color: var(--ink-2); }
+
+        /* achievements ledger */
+        .ach .item {
+            display: grid;
+            grid-template-columns: 26px 1fr;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--line);
+            align-items: start;
+        }
+        .ach .item:last-child { border-bottom: none; }
+        .ach .item .n {
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--accent);
+            padding-top: 3px;
+        }
+        .ach .item .t { font-size: 13.5px; line-height: 1.48; color: var(--ink-2); }
+        .ach .item .t b { color: var(--ink); font-weight: 600; }
+
+        /* ============================================================
+           COLOPHON / FOOTER
+           ============================================================ */
+        .colophon {
+            margin-top: 48px;
+            padding-top: 18px;
+            border-top: 4px double var(--ink);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px;
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+        }
+        .colophon b { color: var(--accent); font-weight: 600; }
+
+        /* ============================================================
+           FLOATING PRINT CONTROL
+           ============================================================ */
+        .toolbar {
+            position: fixed;
+            right: clamp(14px, 3vw, 34px);
+            bottom: clamp(14px, 3vw, 34px);
+            z-index: 50;
+            display: flex;
+            gap: 8px;
+        }
+        .toolbar button {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--paper);
+            background: var(--ink);
+            border: none;
+            padding: 12px 18px;
+            border-radius: 2px;
+            cursor: pointer;
+            box-shadow: 0 8px 24px -8px rgba(27,26,22,0.6);
+            transition: background 0.2s, transform 0.15s;
+        }
+        .toolbar button:hover { background: var(--accent); transform: translateY(-2px); }
+        .toolbar button:active { transform: translateY(0); }
+
+        /* ============================================================
+           LOAD CHOREOGRAPHY
+           ============================================================ */
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal {
+                opacity: 0;
+                transform: translateY(16px);
+                animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+            }
+            @keyframes rise { to { opacity: 1; transform: none; } }
+            .d1 { animation-delay: 0.05s; }
+            .d2 { animation-delay: 0.15s; }
+            .d3 { animation-delay: 0.27s; }
+            .d4 { animation-delay: 0.40s; }
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 680px) {
+            .masthead { grid-template-columns: 1fr; gap: 22px; }
+            .portrait { width: 150px; order: -1; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .charter { grid-template-columns: 1fr; }
+            .stat:nth-child(2) { border-right: none; }
+            .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--line); }
+            .entry { grid-template-columns: 1fr; gap: 10px; }
+            .entry .when { padding-top: 0; }
+            .projects { grid-template-columns: 1fr; }
+            .dateline { font-size: 9px; letter-spacing: 0.1em; }
+            .contacts { flex-direction: column; }
+            .contact { border-right: none; border-bottom: 1px solid var(--line-2); }
+            .contact:last-child { border-bottom: none; }
+        }
+
+        /* ============================================================
+           PRINT — full screen-fidelity: the PDF mirrors the web design
+           (same type scale, drop cap, paper grain, colours & proportions)
+           ============================================================ */
+        @page { size: A4; margin: 0; }
+        @media print {
+            html, body {
+                background: var(--paper);
+                padding: 0;
+                margin: 0;
+                font-size: 15px;
+                line-height: 1.55;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            /* the sheet becomes the full A4 surface — paper edge-to-edge,
+               grain intact, generous internal padding like the web card */
+            .sheet {
+                max-width: 100%;
+                box-shadow: none;
+                background: var(--paper);
+                padding: 15mm 14mm;
+            }
+            .sheet::after { display: block; }   /* keep paper texture */
+            .toolbar { display: none; }
+            .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+            .live-link .pulse { animation: none; }
+
+            /* graceful pagination — never split an atomic block, keep
+               a heading with its content, don't strand the masthead/stats */
+            .masthead, .stats, .entry, .proj, .info, .ach .item, .charter .card,
+            .folio-cat, .skill-block, .contacts, .live-link { break-inside: avoid; }
+            .sec-head { break-after: avoid; }
+
+            /* drop the portrait shadow — Chrome renders it as a hard dark block in PDF */
+            .portrait { box-shadow: none; }
+
+            /* static output: neutralise hover-only states */
+            .proj:hover, .tag:hover, .contact:hover { background: var(--paper); color: inherit; }
+            a.contact:hover { background: transparent; color: var(--ink-2); }
+            .portrait:hover img { filter: grayscale(0.32) contrast(1.03) sepia(0.06); }
+        }
+    </style>
+</head>
+<body>
+    <main class="sheet">
+
+        <!-- ===================== MASTHEAD ===================== -->
+        <div class="dateline reveal d1">
+            <span class="edition">No. 16 · Vol. Craft</span>
+            <span>Curriculum Vitæ — The Technical Record</span>
+            <span>Est. MMXIV</span>
+        </div>
+
+        <header class="masthead reveal d1">
+            <div class="mast-text">
+                <h1>
+                    <span class="given">Ahmad Abdul-Jawad</span>
+                    <span class="family">Mahmoud</span>
+                </h1>
+                <div class="role-bar">
+                    <div class="role">Technical Lead <span class="sep">/</span> Staff Engineer <span class="sep">/</span> Architect</div>
+                    <div class="tenure">Cairo ⟶ Riyadh · 12+ Years Hands-On · 8+ Leading</div>
+                </div>
+            </div>
+            <figure class="portrait">
+                <img src="assets/portrait.jpg" alt="Portrait of Ahmad Abdul-Jawad Mahmoud">
+                <figcaption class="cap"><span>Technical Lead</span><b>EST. 2014</b></figcaption>
+            </figure>
+        </header>
+
+        <nav class="contacts reveal d2">
+            <a class="contact" href="mailto:ahmad_abdulgawad.mahmoud@yahoo.com">
+                <span class="k">Correspondence</span>ahmad_abdulgawad.mahmoud@yahoo.com
+            </a>
+            <span class="contact">
+                <span class="k">Telephone</span>+966 507 242 916 · +20 112 687 3152
+            </span>
+            <span class="contact">
+                <span class="k">Bureau</span>Riyadh, Saudi Arabia
+            </span>
+            <a class="contact" href="https://www.linkedin.com/in/ahmadabdulgawadmahmoud/" target="_blank" rel="noopener">
+                <span class="k">Wire</span>LinkedIn — /ahmadabdulgawadmahmoud
+            </a>
+        </nav>
+
+        <a class="live-link reveal d2" href="https://elgawady14.github.io/ahmad-ios-resume/versions/2026-08-technical-lead-terminal/" target="_blank" rel="noopener">
+            <span class="pulse"></span> See the live interactive edition <span class="arr">↗</span>
+        </a>
+
+        <!-- ===================== LEAD ===================== -->
+        <p class="lead reveal d2">
+            <span class="drop">T</span>echnical lead with <strong>12+ years</strong> hands-on and
+            <strong>8+ leading</strong> — the engineer a team's hardest problems land on. For seven years I owned
+            the architecture of an enterprise POS used by <span class="underline">20k+ restaurants and cafés</span>:
+            an offline-first CoreData core with cloud sync, the module boundaries, the review bar, and the
+            multi-year SwiftUI migration that kept it modern without pausing delivery. I lead by building —
+            most recently a production ride-hailing platform architected and shipped <strong>solo</strong> across
+            native iOS &amp; Android, a NestJS / PostgreSQL / Redis backend, and a Next.js operations console.
+        </p>
+
+        <!-- ===================== STATS ===================== -->
+        <section class="stats reveal d3">
+            <div class="stat">
+                <div class="num">12<em>+</em></div>
+                <div class="lbl">Years<br>hands-on</div>
+            </div>
+            <div class="stat">
+                <div class="num">8<em>+</em></div>
+                <div class="lbl">Years leading<br>engineering teams</div>
+            </div>
+            <div class="stat">
+                <div class="num">35<em>M+</em></div>
+                <div class="lbl">Users reached<br>across shipped apps</div>
+            </div>
+            <div class="stat">
+                <div class="num">30<em>+</em></div>
+                <div class="lbl">Projects<br>delivered</div>
+            </div>
+        </section>
+
+        <!-- ===================== LEADERSHIP CHARTER ===================== -->
+        <section class="section reveal d3">
+            <div class="sec-head">
+                <span class="num">§ 01</span>
+                <h2>How I Lead Technically</h2>
+                <span class="rule"></span>
+            </div>
+
+            <div class="charter">
+                <div class="card">
+                    <div class="n">01 — Architecture &amp; Direction</div>
+                    <h3>Own the shape of the system</h3>
+                    <p>Module boundaries, data models, and the offline-first CoreData + cloud-sync core of an enterprise POS — built so a venue keeps trading when the network does not. Plus the <b>migration plans that keep a codebase current without stalling delivery</b>.</p>
+                </div>
+                <div class="card">
+                    <div class="n">02 — Standards in Code</div>
+                    <h3>The bar is a diff, not a document</h3>
+                    <p>Review culture, automated tests that gate merges, and CI/CD built from nothing (<b>60% faster deployments</b>). The standards I wrote and enforced held the app at a <b>99.8–99.9% crash-free rate</b> in production.</p>
+                </div>
+                <div class="card">
+                    <div class="n">03 — Mentoring at the Keyboard</div>
+                    <h3>Lead by building alongside</h3>
+                    <p>Seven years mentoring a <b>5+ engineer team</b> through pairing, design review, and the kind of feedback that makes the next PR better. Technical direction lands faster when the lead is in the codebase too.</p>
+                </div>
+                <div class="card">
+                    <div class="n">04 — Whole-Stack Depth</div>
+                    <h3>Credible at every layer</h3>
+                    <p>iOS &amp; Android clients, NestJS/PostgreSQL/Redis backends, Next.js consoles — I built and ran <b>all four layers of a production platform solo</b>: trip state machine, scored dispatch over a Redis geo index, double-entry ledger, realtime sockets, <b>1,150+ tests</b>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== EXPERIENCE ===================== -->
+        <section class="section reveal d3">
+            <div class="sec-head">
+                <span class="num">§ 02</span>
+                <h2>Professional Experience</h2>
+                <span class="rule"></span>
+            </div>
+
+            <div class="xp">
+
+                <article class="entry">
+                    <div class="when">
+                        Aug 2019 — Aug 2026
+                        <span class="now">Most recent</span>
+                        <span class="place">Riyadh, KSA</span>
+                    </div>
+                    <div class="what">
+                        <div class="title">iOS Team Lead <span style="font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:.04em">— 7 years leading the iOS org</span></div>
+                        <div class="org"><a href="https://apps.apple.com/sa/app/marn/id1495693049" target="_blank" rel="noopener">Marn — Jahez Group</a></div>
+                        <ul>
+                            <li><b>Led a 5+ engineer iOS team</b> for seven years — onboarding, mentoring, career growth, and the review culture behind an enterprise POS used by 20k+ restaurants and cafés.</li>
+                            <li><b>Owned the technical roadmap and architecture:</b> an offline-first CoreData core with cloud sync, built so a venue keeps trading when the network does not.</li>
+                            <li><b>Set the engineering standards</b> — module boundaries, code review, automated testing — that held the app at a 99.8–99.9% crash-free rate in production.</li>
+                            <li><b>Drove the multi-year migration</b> to SwiftUI, Combine and async/await without pausing feature delivery, and made the case for it to product leadership.</li>
+                            <li><b>Built CI/CD and the release process from scratch</b>, cutting deployment time 60% and shortening every engineer's feedback loop.</li>
+                            <li>Ran the performance programme (40% faster load times) and designed the table-management, order-processing and inventory systems at the heart of the product.</li>
+                            <li>Partnered with product, design and backend leadership on scope, estimates and delivery commitments the team could keep.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="when">
+                        Dec 2025 — Jul 2026
+                        <span class="place">Independent</span>
+                    </div>
+                    <div class="what">
+                        <div class="title">Founding Platform Architect — iOS · Android · Backend · Web</div>
+                        <div class="org">Ride-Hailing Platform · Independent Project</div>
+                        <p class="lead">Took the <b>full technical scope of a founding CTO</b> and carried it alone: chose the stack, set the standards, and shipped a production ride-hailing platform — two native <b>iOS/SwiftUI</b> apps (Rider &amp; Driver) plus their Android counterparts, a hardened backend, and a real-time ops console. Every layer from data model to release, governed by explicit rules: idempotent mutations, double-entry accounting, acyclic module boundaries, and a CI test suite that gates the merge.</p>
+                        <div class="tracks">
+                            <div class="track">
+                                <div><span class="plat">Backend APIs</span><span class="per">NestJS · TypeScript · Dec ’25 → Jul ’26</span></div>
+                                <div>
+                                    <div class="bar"><i style="left:0%;width:100%"></i></div>
+                                    <div class="desc">Modular monolith, ~17 domains — <b>trip state machine</b>, <b>scored dispatch</b> over a Redis geo index, <b>double-entry ledger</b>, realtime rider/driver/admin <b>sockets</b>, JWT + phone-OTP, idempotency &amp; audit log · <b>1,150+ tests</b>, Swagger docs.</div>
+                                </div>
+                            </div>
+                            <div class="track">
+                                <div><span class="plat">iOS Apps · Rider &amp; Driver</span><span class="per">SwiftUI · Jan ’26 → Jul ’26</span></div>
+                                <div>
+                                    <div class="bar"><i style="left:14%;width:86%"></i></div>
+                                    <div class="desc">Two native <b>SwiftUI</b> apps — live GPS <b>trip lifecycle</b>, realtime sockets, in-app chat, payments, and driver earnings &amp; turn-by-turn navigation.</div>
+                                </div>
+                            </div>
+                            <div class="track">
+                                <div><span class="plat">Admin Console</span><span class="per">Next.js 14 · Feb ’26 → Jul ’26</span></div>
+                                <div>
+                                    <div class="bar"><i style="left:29%;width:71%"></i></div>
+                                    <div class="desc">Bespoke <b>19-screen</b> ops surface — live <b>MapLibre</b> trips map, dispatch/SOS live boards, KYC review, finance reconciliation, refunds/payouts, map <b>zone editor</b>, <b>Google SSO</b>.</div>
+                                </div>
+                            </div>
+                            <div class="track">
+                                <div><span class="plat">Android Apps · Rider &amp; Driver</span><span class="per">Kotlin · Jetpack Compose · Mar ’26 → Jul ’26</span></div>
+                                <div>
+                                    <div class="bar"><i style="left:43%;width:57%"></i></div>
+                                    <div class="desc">Native <b>Kotlin / Compose</b> parity for both apps — same trip lifecycle, realtime tracking, chat, and payments across <b>one shared API contract</b>.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="close">One backend · one contract · four clients — plus growth loops (promotions, referrals, loyalty tiers, wallet), driver safety/SOS, and scheduled reconciliation jobs. The exercise a technical leader needs periodically: own every trade-off yourself, then know exactly what you are asking of a team.</p>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="when">
+                        Sep 2025 — Dec 2025
+                        <span class="place">Volunteer</span>
+                    </div>
+                    <div class="what">
+                        <div class="title">Senior iOS Engineer</div>
+                        <div class="org"><a href="https://apps.apple.com/us/app/haramblur/id6741595731" target="_blank" rel="noopener">HaramBlur</a> · Voluntary Charity Project</div>
+                        <ul>
+                            <li>Designed an architecture integrating on-device machine learning for real-time content analysis.</li>
+                            <li>Built a seamless communication layer between native iOS and web-based content.</li>
+                            <li>Implemented efficient image processing with region-based and full-image blur effects.</li>
+                            <li>Created a real-time video monitoring system for continuous content filtering.</li>
+                            <li>Developed smart banner blocking and optimised memory management throughout.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="when">Mar 2018 — May 2019<span class="place">Riyadh, KSA</span></div>
+                    <div class="what">
+                        <div class="title">iOS Team Lead</div>
+                        <div class="org"><a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" target="_blank" rel="noopener">Ego — The Ride Hailing App</a></div>
+                        <ul>
+                            <li>Led iOS delivery for a complete ride-hailing ecosystem (rider, driver, watchOS) serving 15M+ users in Saudi Arabia.</li>
+                            <li>Implemented real-time GPS tracking and navigation with MapKit and optimised route algorithms.</li>
+                            <li>Integrated Apple Pay, HyperPay, and push-notification infrastructure.</li>
+                            <li>Created seamless iPhone ⟷ Apple Watch handoff for continuous ride tracking.</li>
+                            <li>Built the driver rating system and real-time fare calculation engine.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="when">Sep 2016 — Mar 2018<span class="place">KSA</span></div>
+                    <div class="what">
+                        <div class="title">Senior iOS Engineer</div>
+                        <div class="org"><a href="https://apps.apple.com/sa/app/hungerstation/id596011949" target="_blank" rel="noopener">HungerStation — DeliveryHero Group</a></div>
+                        <ul>
+                            <li>Contributed to a major food-delivery platform serving 20M+ users.</li>
+                            <li>Optimised app performance for high-volume transaction processing.</li>
+                            <li>Implemented real-time order tracking and delivery optimisation.</li>
+                            <li>Collaborated with backend teams on API design and integration.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="when">May 2016 — Aug 2016</div>
+                    <div class="what">
+                        <div class="title">iOS Developer</div>
+                        <div class="org"><a href="https://www.linkedin.com/company/pulse-company-ltd-/" target="_blank" rel="noopener">ALNapedh</a></div>
+                        <ul>
+                            <li>Developed food-ordering apps with Firebase integration and real-time features.</li>
+                            <li>Implemented Spreedly payments and live-chat functionality.</li>
+                            <li>Built responsive UI with Auto Layout across multiple device sizes.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="when">Jul 2015 — Sep 2015</div>
+                    <div class="what">
+                        <div class="title">iOS &amp; Apple Watch Developer</div>
+                        <div class="org"><a href="https://niledesign.com" target="_blank" rel="noopener">Nile Design Co.</a></div>
+                        <ul>
+                            <li>Early adopter of Apple Watch development (watchOS 1–2).</li>
+                            <li>Built a foundation in iOS and watchOS app development.</li>
+                            <li>Adopted SwiftUI from WWDC 2019 onward.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="when">May 2014 — May 2015</div>
+                    <div class="what">
+                        <div class="title">iOS Developer</div>
+                        <div class="org"><a href="https://www.linkedin.com/company/uk-pro-solutions-ltd" target="_blank" rel="noopener">UK Pro. Solutions Ltd.</a></div>
+                        <ul>
+                            <li>Foundation iOS experience in Objective-C and early Swift.</li>
+                            <li>Built social networks and e-commerce platforms.</li>
+                            <li>Learned core iOS principles and App Store deployment.</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ===================== PROJECTS ===================== -->
+        <section class="section reveal d3">
+            <div class="sec-head">
+                <span class="num">§ 03</span>
+                <h2>Selected Projects</h2>
+                <span class="rule"></span>
+            </div>
+
+            <div class="projects">
+                <article class="proj">
+                    <div class="idx">01 — FULL-STACK</div>
+                    <h3>Ride-Hailing Platform <span style="font-family:var(--mono);font-size:11px;color:var(--ink-3)">(built from scratch · Dec 2025 – Jul 2026)</span></h3>
+                    <div class="tech">SwiftUI · Kotlin · Jetpack Compose · NestJS · TypeScript · PostgreSQL · Redis · Socket.IO · Next.js</div>
+                    <p>End-to-end ride-hailing platform architected solo: <strong>four native apps</strong> (Rider &amp; Driver on iOS/SwiftUI and Android/Kotlin·Compose), a hardened NestJS backend (trip state machine, scored dispatch, double-entry ledger, realtime sockets, 1,150+ tests), and a real-time Next.js operations console.</p>
+                    <div class="meta"><span class="dot">◆</span> Four Platforms · Solo Ownership · Production Security</div>
+                </article>
+
+                <article class="proj">
+                    <div class="idx">02 — ENTERPRISE</div>
+                    <h3><a href="https://apps.apple.com/sa/app/marn/id1495693049" target="_blank" rel="noopener">Marn — iPad POS</a></h3>
+                    <div class="tech">SwiftUI · CoreData · CloudKit · Real-time Sync</div>
+                    <p>Enterprise point-of-sale serving 20k+ restaurants and cafés across Saudi Arabia. Offline-first architecture, complex table management, real-time order processing — <strong>the product my iOS team owned for seven years</strong>.</p>
+                    <div class="meta"><span class="dot">★</span> 4.8 / 5 — 2,437 ratings</div>
+                </article>
+
+                <article class="proj">
+                    <div class="idx">03 — MOBILITY</div>
+                    <h3><a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" target="_blank" rel="noopener">Ego — Ride Hailing</a></h3>
+                    <div class="tech">MapKit · Core Location · Apple Pay · Push · watchOS</div>
+                    <p>Complete ride-hailing ecosystem: rider app, driver app, and Apple Watch companion. Real-time GPS, Apple Pay, and cross-device experiences for 15M+ users.</p>
+                    <div class="meta"><span class="dot">★</span> 4.7 / 5 — 211.8k+ ratings</div>
+                </article>
+
+                <article class="proj">
+                    <div class="idx">04 — DELIVERY</div>
+                    <h3><a href="https://apps.apple.com/sa/app/hungerstation/id596011949" target="_blank" rel="noopener">HungerStation</a></h3>
+                    <div class="tech">UIKit · Firebase · Real-time APIs · Perf Optimization</div>
+                    <p>Major food-delivery platform serving 20M+ users across Saudi Arabia and Bahrain. Focused on performance and real-time order tracking.</p>
+                    <div class="meta"><span class="dot">★</span> 4.5 / 5 — 1.9M+ ratings</div>
+                </article>
+
+                <article class="proj">
+                    <div class="idx">05 — AI / PRIVACY</div>
+                    <h3><a href="https://apps.apple.com/us/app/haramblur/id6741595731" target="_blank" rel="noopener">HaramBlur — Privacy Browser</a></h3>
+                    <div class="tech">SwiftUI · CoreML · WKWebView · CoreImage · Vision</div>
+                    <p>Privacy-focused iOS browser with real-time, AI-powered content detection and filtering. On-device ML, smart blur effects, and live video monitoring.</p>
+                    <div class="meta"><span class="dot">◆</span> AI-Powered Privacy Browser</div>
+                </article>
+
+                <article class="proj">
+                    <div class="idx">06 — COMMUNITY</div>
+                    <h3><a href="https://apps.apple.com/eg/app/daleelo-muslim-community/id536783455" target="_blank" rel="noopener">Daleelo</a></h3>
+                    <div class="tech">MapKit · Core Location · Social SDKs · Community</div>
+                    <p>Muslim community app for users across the US — prayer times, mosque finder, and community features with enhanced location and social integration.</p>
+                    <div class="meta"><span class="dot">★</span> 4.5 / 5 — 1,287 ratings</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== LOWER GRID ===================== -->
+        <div class="grid-2">
+
+            <!-- LEFT: skills + portfolio -->
+            <div>
+                <section class="section reveal d3" style="margin-top:0">
+                    <div class="sec-head">
+                        <span class="num">§ 04</span>
+                        <h2>Stack &amp; Craft</h2>
+                        <span class="rule"></span>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Engineering Leadership <span>org</span></h4>
+                        <div class="tags">
+                            <span class="tag hot">Team Leadership</span>
+                            <span class="tag hot">Technical Direction</span>
+                            <span class="tag">Architecture Governance</span>
+                            <span class="tag">Technical Roadmap</span>
+                            <span class="tag">Mentoring &amp; Career Growth</span>
+                            <span class="tag">Onboarding</span>
+                            <span class="tag">Code Review Culture</span>
+                            <span class="tag">Estimation &amp; Planning</span>
+                            <span class="tag">Cross-functional Partnership</span>
+                            <span class="tag">Quality &amp; Crash Budgets</span>
+                            <span class="tag">Release Management</span>
+                            <span class="tag">Agile / Scrum</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>iOS — 2025 <span>core</span></h4>
+                        <div class="tags">
+                            <span class="tag hot">Swift 6.0</span>
+                            <span class="tag hot">SwiftUI</span>
+                            <span class="tag">UIKit</span>
+                            <span class="tag">Combine</span>
+                            <span class="tag">async/await</span>
+                            <span class="tag">SwiftData</span>
+                            <span class="tag">iOS 18+</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Android — 2025 <span>native</span></h4>
+                        <div class="tags">
+                            <span class="tag hot">Kotlin</span>
+                            <span class="tag hot">Jetpack Compose</span>
+                            <span class="tag">Coroutines</span>
+                            <span class="tag">Flow</span>
+                            <span class="tag">MVVM</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Architecture <span>patterns</span></h4>
+                        <div class="tags">
+                            <span class="tag">MVVM</span>
+                            <span class="tag">VIPER</span>
+                            <span class="tag">Clean Architecture</span>
+                            <span class="tag">Coordinator</span>
+                            <span class="tag">TDD</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Apple Ecosystem <span>platforms</span></h4>
+                        <div class="tags">
+                            <span class="tag">watchOS</span>
+                            <span class="tag">tvOS</span>
+                            <span class="tag">macOS</span>
+                            <span class="tag">WidgetKit</span>
+                            <span class="tag">Live Activities</span>
+                            <span class="tag">App Intents</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Modern Features <span>intelligence</span></h4>
+                        <div class="tags">
+                            <span class="tag">Core ML</span>
+                            <span class="tag">Vision</span>
+                            <span class="tag">ARKit</span>
+                            <span class="tag">Dynamic Island</span>
+                            <span class="tag">App Tracking</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Backend &amp; APIs <span>full-stack</span></h4>
+                        <div class="tags">
+                            <span class="tag hot">NestJS</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">TypeORM</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">JWT/OTP Auth</span>
+                            <span class="tag">REST</span>
+                            <span class="tag">GraphQL</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">CloudKit</span>
+                            <span class="tag">WebSockets</span>
+                            <span class="tag">Swagger/OpenAPI</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Tooling &amp; AI <span>workflow</span></h4>
+                        <div class="tags">
+                            <span class="tag">Xcode 15+</span>
+                            <span class="tag">Fastlane</span>
+                            <span class="tag">TestFlight</span>
+                            <span class="tag">Instruments</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">Copilot</span>
+                            <span class="tag">Cursor</span>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="section reveal d3">
+                    <div class="sec-head">
+                        <span class="num">§ 05</span>
+                        <h2>Portfolio Index</h2>
+                        <span class="rule"></span>
+                    </div>
+
+                    <div class="folio">
+                        <div class="folio-cat">
+                            <div class="h">Food &amp; Gaming</div>
+                            <div class="items">
+                                <a href="https://apps.apple.com/sa/app/hungerstation/id596011949" target="_blank" rel="noopener">HungerStation</a> — delivery<br>
+                                <a href="https://apps.apple.com/au/app/punters-horse-racing-form/id916114449" target="_blank" rel="noopener">Punters</a> — racing tips
+                            </div>
+                        </div>
+                        <div class="folio-cat">
+                            <div class="h">Transportation</div>
+                            <div class="items">
+                                <a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" target="_blank" rel="noopener">Ego — Rider</a><br>
+                                <a href="https://apps.apple.com/sa/app/ego-driver/id1379066908" target="_blank" rel="noopener">Ego — Driver</a><br>
+                                <a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" target="_blank" rel="noopener">Ego — Watch app</a>
+                            </div>
+                        </div>
+                        <div class="folio-cat">
+                            <div class="h">Enterprise</div>
+                            <div class="items">
+                                <a href="https://apps.apple.com/sa/app/marn/id1495693049" target="_blank" rel="noopener">Marn POS</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/83hd7cp3l9ou5z604zi2s/MedicalGuide-Screenshots.zip?rlkey=itkubk9kdtgjc0ncqemxlnqg7&dl=0" target="_blank" rel="noopener">Medical Guide</a>
+                            </div>
+                        </div>
+                        <div class="folio-cat">
+                            <div class="h">Social &amp; Community</div>
+                            <div class="items">
+                                <a href="https://apps.apple.com/eg/app/daleelo-muslim-community/id536783455" target="_blank" rel="noopener">Daleelo</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/umdvm22e7bpptuz17p7bs/NU-inc-Documentation.zip?rlkey=mi4tvjt883ewlg92pm3vgrinl&e=1&dl=0" target="_blank" rel="noopener">NU-inc</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/8kb68efzp2il392ruvbyl/Veeu-Documentation.zip?rlkey=mt5trzdw77c0uvc8yynvp3r1z&dl=0" target="_blank" rel="noopener">VeeU</a>
+                            </div>
+                        </div>
+                        <div class="folio-cat">
+                            <div class="h">watchOS</div>
+                            <div class="items">
+                                <a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" target="_blank" rel="noopener">Ego Watch</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/gp3doqzmquws7wc9dlmvm/TaQs.zip?rlkey=wxeew62uvehnl2ilwdn1s9af0&e=1&dl=0" target="_blank" rel="noopener">TaQs Weather</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/amjjbkolrk16uyr3vhprb/TweetMe.zip?rlkey=wblefya3ylpcrhsv9o3usfb6y&e=1&dl=0" target="_blank" rel="noopener">TweetMe</a>
+                            </div>
+                        </div>
+                        <div class="folio-cat">
+                            <div class="h">E-commerce</div>
+                            <div class="items">
+                                <a href="https://www.dropbox.com/scl/fi/fjpw0x2m1enjnb1w0wr2l/iBss-Screenshots.zip?rlkey=36s1asz3jugitvhtnlofj4cve&dl=0" target="_blank" rel="noopener">iBss</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/w5p889lbud4fke7mrayp3/Exlusive-Luxe-Documentation.zip?rlkey=0dlp7h4m5862fbcyfkanfudr7&e=1&dl=0" target="_blank" rel="noopener">Exclusive Luxe</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/u0iam6o5remsg1rsa77pq/Scratch-Screenshots.zip?rlkey=03bd6qgzq4wtc3z6ncvbq5h70&e=1&dl=0" target="_blank" rel="noopener">Scratch</a>
+                            </div>
+                        </div>
+                        <div class="folio-cat">
+                            <div class="h">Religious &amp; Edu</div>
+                            <div class="items">
+                                <a href="https://www.dropbox.com/scl/fi/h4zmcye9woc8cbkdwic82/Afasy-Screenshots.zip?rlkey=8jgcmwyxdtkae5e4r8gjd1i3s&dl=0" target="_blank" rel="noopener">Afasy</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/ibvqv5dkvk7u3yq27jy6v/ANG-ArabNileGroup.zip?rlkey=i68964la1sht42kpnzuxohb2c&e=1&dl=0" target="_blank" rel="noopener">ArabNileGroup</a>
+                            </div>
+                        </div>
+                        <div class="folio-cat">
+                            <div class="h">Utility &amp; Tools</div>
+                            <div class="items">
+                                <a href="https://www.dropbox.com/scl/fi/a0nem8v4d3nj4mchwrst0/Unlocking-Smart-Snapshots.zip?rlkey=xg96lps1mkw9jor82ipymnvd4&e=1&dl=0" target="_blank" rel="noopener">Unlocking Smart</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/krfbs0ww7y930o4ehpj0b/Insta-Screenshots.zip?rlkey=gcu7parc7tabchmt86i99yjfx&dl=0" target="_blank" rel="noopener">Insta</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/eiancyi4haxe1p7iuu79c/iContacts-Documentation.zip?rlkey=5q2t69f0gtfpp8bnq31jwrevz&dl=0" target="_blank" rel="noopener">iContacts</a><br>
+                                <span class="muted">🚀 First iOS app</span>
+                            </div>
+                        </div>
+                        <div class="folio-cat">
+                            <div class="h">AI &amp; ML</div>
+                            <div class="items">
+                                <a href="https://apps.apple.com/us/app/haramblur/id6741595731" target="_blank" rel="noopener">HaramBlur</a> — CoreML<br>
+                                <a href="https://www.dropbox.com/scl/fi/l3bs0rvczj35jjngmq4ia/RecognizeMe.rar?rlkey=51c6eza3bo9ursp8w1gmqcvmp&dl=0" target="_blank" rel="noopener">RecognizeMe</a><br>
+                                <span class="muted">🎓 Grad project — OpenCV</span>
+                            </div>
+                        </div>
+                        <div class="folio-cat">
+                            <div class="h">Web</div>
+                            <div class="items">
+                                <a href="https://www.dropbox.com/scl/fi/tgpvbx0ixk5zmnoicu2up/Facebook.rar?rlkey=7dbm8fpplvvfozg4nqhwjkadu&dl=0" target="_blank" rel="noopener">FaceDemo</a><br>
+                                <a href="https://www.dropbox.com/scl/fi/5yuhlscb9hwu6q0xhu857/Web-Pages.rar?rlkey=gqs9ddbg3r46lbcyonm3yufc5&dl=0" target="_blank" rel="noopener">Web Pages</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT: dossier sidebar -->
+            <aside>
+                <section class="section reveal d4" style="margin-top:0">
+                    <div class="sec-head">
+                        <span class="num">§ 06</span>
+                        <h2>Record</h2>
+                        <span class="rule"></span>
+                    </div>
+
+                    <div class="info">
+                        <div class="h">Education</div>
+                        <div class="body">
+                            <div class="deg">B.Sc. Information Systems</div>
+                            <div class="sub">Computer Sciences College</div>
+                            <div class="sub">Asyut University, Egypt · 2009–2013</div>
+                            <div class="hl">iOS Semester — Excellent (91.5%)</div>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="h">Certification</div>
+                        <div class="body">
+                            <div class="deg" style="font-size:15px">ISTQB Foundation Level</div>
+                            <div class="sub">Egyptian Software Testing Qualification Board</div>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="h">Languages</div>
+                        <div class="body" style="border-left-color:var(--accent)">
+                            <div class="row"><span class="lng">Arabic</span><span class="lvl">Native</span></div>
+                            <div class="row"><span class="lng">English</span><span class="lvl">Professional</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section reveal d4">
+                    <div class="sec-head">
+                        <span class="num">§ 07</span>
+                        <h2>Honours</h2>
+                        <span class="rule"></span>
+                    </div>
+                    <div class="ach">
+                        <div class="item"><span class="n">01</span><span class="t">Led an iOS engineering team for <b>7 consecutive years</b> on a POS platform serving <b>20k+ restaurants</b> and cafés — through the product's growth from launch scale to enterprise.</span></div>
+                        <div class="item"><span class="n">02</span><span class="t">Held a <b>99.8–99.9% crash-free rate</b> and cut deployment time <b>60%</b> by building the standards, tests and CI/CD the team ran on.</span></div>
+                        <div class="item"><span class="n">03</span><span class="t">Architected a <b>full-stack ride-hailing platform solo</b> — four native apps (iOS + Android), a NestJS/PostgreSQL backend, and a Next.js ops console, with idempotent APIs and double-entry accounting.</span></div>
+                        <div class="item"><span class="n">04</span><span class="t">Built a food-delivery platform serving <b>20M+ users</b> across Saudi Arabia and Bahrain, and a ride-hailing ecosystem serving <b>15M+ users</b> in Saudi Arabia.</span></div>
+                        <div class="item"><span class="n">05</span><span class="t"><b>10+ apps</b> published on the App Store, used by millions across MENA.</span></div>
+                        <div class="item"><span class="n">06</span><span class="t"><b>30+ projects</b> delivered across a 12-year career.</span></div>
+                        <div class="item"><span class="n">07</span><span class="t">Early Swift adopter (WWDC 2014) and early SwiftUI adopter (WWDC 2019) — a habit of betting on the right platform shift early.</span></div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <!-- ===================== COLOPHON ===================== -->
+        <footer class="colophon reveal d4">
+            <span><b>Technical leadership</b> · <b>12+</b> years hands-on · <b>8+</b> leading</span>
+            <span>Set in Fraunces &amp; JetBrains Mono</span>
+            <span>Edition 2026 · Cairo ⟶ Riyadh</span>
+        </footer>
+
+    </main>
+
+    <div class="toolbar">
+        <button onclick="window.print()" aria-label="Print or save as PDF">⎙ Print / PDF</button>
+    </div>
+<script>
+(function(){var loc=new URLSearchParams(location.search).get('loc')==='cairo'?'cairo':'riyadh';var V={riyadh:{bureau:'Riyadh, Saudi Arabia',phone:'+966 507 242 916 · +20 112 687 3152'},cairo:{bureau:'Cairo, Egypt',phone:'+20 112 687 3152 · +966 507 242 916'}}[loc];document.documentElement.setAttribute('data-loc',loc);document.querySelectorAll('.k').forEach(function(k){var t=(k.textContent||'').trim().toLowerCase(),val;if(t==='bureau'||t==='base')val=V.bureau;else if(t==='telephone'||t==='phone')val=V.phone;else return;var p=k.parentNode,label=k.cloneNode(true);p.innerHTML='';p.appendChild(label);p.appendChild(document.createTextNode(val));});if(loc==='cairo')document.querySelectorAll('a.live-link').forEach(function(a){try{var u=new URL(a.href);u.searchParams.set('loc','cairo');a.href=u.toString();}catch(e){}});})();
+</script>
+</body>
+</html>
