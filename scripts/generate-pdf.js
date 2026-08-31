@@ -111,12 +111,19 @@ async function exportEdition(browser, job) {
   // preferCSSPageSize) is what produces a correct continuous page — forcing
   // height through page.pdf({height}) mis-lays-out the content.
   const contentH = await page.evaluate((mm, pageWmm) => {
-    // Screen-only UI chrome (the floating Print button) would otherwise be
-    // baked into 'screen'-media exports — the print stylesheet hides it, but
-    // that stylesheet isn't active here.
-    const chrome = document.createElement('style');
-    chrome.textContent = '.fab, .toolbar { display: none !important; }';
-    document.head.appendChild(chrome);
+    // 'screen'-media exports (the terminal editions) don't get the print
+    // stylesheet, so two of its rules have to be applied by hand here:
+    //   - hide the floating Print button, which was otherwise baked into the
+    //     bottom-right of the page;
+    //   - force the reveal animations to their end state. .rv/.reveal start at
+    //     opacity:0 and fade in over .6s with delays up to .4s, so the fixed
+    //     wait below was racing them — lose that race and the exported page is
+    //     blank apart from its chrome.
+    const overrides = document.createElement('style');
+    overrides.textContent =
+      '.fab, .toolbar { display: none !important; }' +
+      '.rv, .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }';
+    document.head.appendChild(overrides);
 
     const h = Math.ceil(document.documentElement.getBoundingClientRect().height);
     const style = document.createElement('style');
