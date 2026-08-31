@@ -111,6 +111,13 @@ async function exportEdition(browser, job) {
   // preferCSSPageSize) is what produces a correct continuous page — forcing
   // height through page.pdf({height}) mis-lays-out the content.
   const contentH = await page.evaluate((mm, pageWmm) => {
+    // Screen-only UI chrome (the floating Print button) would otherwise be
+    // baked into 'screen'-media exports — the print stylesheet hides it, but
+    // that stylesheet isn't active here.
+    const chrome = document.createElement('style');
+    chrome.textContent = '.fab, .toolbar { display: none !important; }';
+    document.head.appendChild(chrome);
+
     const h = Math.ceil(document.documentElement.getBoundingClientRect().height);
     const style = document.createElement('style');
     style.textContent =
