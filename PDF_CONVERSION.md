@@ -14,12 +14,25 @@ you change an `index.html`, you regenerate the PDFs with one command.
 
 ## 1. The editions
 
-| id (CLI)    | Source HTML                            | Output PDF                                                   | Stylesheet | Margin |
-|-------------|----------------------------------------|-------------------------------------------------------------|------------|--------|
-| `root`      | `index.html`                           | `Ahmad_iOS_Resume.pdf`                             | `print`    | 0 mm   |
-| `editorial` | `versions/2026-06-editorial/index.html`| `versions/2026-06-editorial/Ahmad_iOS_TechLead_Resume.pdf` | `print`    | 0 mm   |
-| `terminal`  | `versions/2026-06-terminal/index.html` | `versions/2026-06-terminal/Ahmad_iOS_TechLead_Resume.pdf`  | `screen`   | 9 mm   |
-| `swiss`     | `versions/2026-06-swiss/index.html`    | `versions/2026-06-swiss/Ahmad_iOS_TechLead_Resume.pdf`     | `print`    | 8 mm   |
+| id (CLI)                    | Source HTML                                         | Output PDF                                                                                | Stylesheet | Margin |
+|-----------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------------|------------|--------|
+| `root`                      | `index.html`                                        | `Ahmad_iOS_Resume.pdf`                                                                      | `print`    | 0 mm   |
+| `editorial`                 | `versions/2026-06-editorial/index.html`             | `versions/2026-06-editorial/Ahmad_iOS_TechLead_Resume.pdf`                                   | `print`    | 0 mm   |
+| `terminal`                  | `versions/2026-06-terminal/index.html`              | `versions/2026-06-terminal/Ahmad_iOS_TechLead_Resume.pdf`                                    | `screen`   | 9 mm   |
+| `swiss`                     | `versions/2026-06-swiss/index.html`                 | `versions/2026-06-swiss/Ahmad_iOS_TechLead_Resume.pdf`                                       | `print`    | 8 mm   |
+| `ios`                       | `versions/2026-07-ios/index.html`                   | `versions/2026-07-ios/Ahmad_iOS_Resume.pdf`                                                  | `print`    | 0 mm   |
+| `mobile`                    | `versions/2026-07-mobile/index.html`                | `versions/2026-07-mobile/Ahmad_Mobile_Resume.pdf`                                             | `print`    | 0 mm   |
+| `cto`                       | `versions/2026-08-cto/index.html`                   | `versions/2026-08-cto/Ahmad_CTO_Resume.pdf`                                                  | `print`    | 0 mm   |
+| `engineering-lead`          | `versions/2026-08-engineering-lead/index.html`      | `versions/2026-08-engineering-lead/Ahmad_Engineering_Lead_Resume.pdf`                         | `print`    | 0 mm   |
+| `technical-lead`            | `versions/2026-08-technical-lead/index.html`        | `versions/2026-08-technical-lead/Ahmad_Technical_Lead_Resume.pdf`                             | `print`    | 0 mm   |
+| `ios-terminal`              | `versions/2026-07-ios-terminal/index.html`          | `versions/2026-07-ios-terminal/Ahmad_iOS_Terminal_Resume.pdf`                                 | `screen`   | 9 mm   |
+| `mobile-terminal`           | `versions/2026-07-mobile-terminal/index.html`       | `versions/2026-07-mobile-terminal/Ahmad_Mobile_Terminal_Resume.pdf`                           | `screen`   | 9 mm   |
+| `cto-terminal`              | `versions/2026-08-cto-terminal/index.html`          | `versions/2026-08-cto-terminal/Ahmad_CTO_Terminal_Resume.pdf`                                 | `screen`   | 9 mm   |
+| `engineering-lead-terminal` | `versions/2026-08-engineering-lead-terminal/index.html` | `versions/2026-08-engineering-lead-terminal/Ahmad_Engineering_Lead_Terminal_Resume.pdf`   | `screen`   | 9 mm   |
+| `technical-lead-terminal`   | `versions/2026-08-technical-lead-terminal/index.html`   | `versions/2026-08-technical-lead-terminal/Ahmad_Technical_Lead_Terminal_Resume.pdf`       | `screen`   | 9 mm   |
+
+Editions marked `loc: true` in the script (every editorial/swiss one) export **twice**:
+the default file (Riyadh) and a `…_Cairo_Resume.pdf` twin.
 
 `root` and `editorial` are the same design (the main downloadable résumé).
 

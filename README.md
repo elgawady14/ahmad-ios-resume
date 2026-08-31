@@ -33,7 +33,7 @@ Senior iOS Tech Lead with **11+ years** of experience leading mobile development
 - **Data:** CoreData, CloudKit, Firebase, REST APIs, GraphQL
 
 ### Leadership & Management
-- **Team Management:** Leading teams of 5+ iOS developers
+- **Team Management:** Led a team of 5+ iOS developers for 7 years
 - **Technical Roadmap:** Driving adoption of modern iOS practices
 - **Mentoring:** Code reviews, knowledge sharing, career development
 - **Methodologies:** Agile, Scrum, Cross-functional collaboration
@@ -53,7 +53,7 @@ Senior iOS Tech Lead with **11+ years** of experience leading mobile development
 - **Tech Stack:** MapKit, Core Location, Apple Pay, Push Notifications, watchOS
 
 ### [Marn iPad POS System](https://apps.apple.com/sa/app/marn/id1495693049)
-**Senior iOS Tech Lead** | *Current Role*
+**iOS Team Lead** | *Marn — Jahez Group · Aug 2019 – Aug 2026*
 - Enterprise point-of-sale system serving **+20k restaurants/cafes**
 - **Rating:** ⭐ 4.8/5 (2,437 ratings)
 - **Tech Stack:** SwiftUI, CoreData, CloudKit, Real-time Sync
@@ -62,6 +62,21 @@ Senior iOS Tech Lead with **11+ years** of experience leading mobile development
 
 - **[📱 View Interactive Resume](https://ahmadabdulgawadmahmoud.github.io/ahmad-ios-resume/)** (GitHub Pages)
 - **[📋 Download PDF Resume](./Ahmad_iOS_Resume.pdf)**
+
+### Targeted editions
+
+Each role family has its own independent, self-contained resume — send the one the posting asks
+for. Every edition exports a Riyadh (default) and a Cairo PDF; see [`versions/`](./versions/).
+
+| Target role | Edition | PDF |
+|-------------|---------|-----|
+| iOS Tech Lead · Team Lead · Senior iOS Engineer | [`versions/2026-07-ios/`](./versions/2026-07-ios/) | `Ahmad_iOS_Resume.pdf` |
+| Mobile Architect · Mobile Team Lead | [`versions/2026-07-mobile/`](./versions/2026-07-mobile/) | `Ahmad_Mobile_Resume.pdf` |
+| **CTO · Head of Engineering** | [`versions/2026-08-cto/`](./versions/2026-08-cto/) | `Ahmad_CTO_Resume.pdf` |
+| **Engineering Lead · Engineering Manager** | [`versions/2026-08-engineering-lead/`](./versions/2026-08-engineering-lead/) | `Ahmad_Engineering_Lead_Resume.pdf` |
+| **Technical Lead · Staff Engineer · Architect** | [`versions/2026-08-technical-lead/`](./versions/2026-08-technical-lead/) | `Ahmad_Technical_Lead_Resume.pdf` |
+
+Each also has a dark "terminal" twin at `<edition>-terminal/` for sending as a live link.
 
 ## 🎓 Education & Certifications
 
@@ -103,4 +118,4 @@ This resume is automatically deployed via GitHub Pages at:
 
 ---
 
-*Last Updated: 2025 | Built with ❤️ and modern web technologies*
+*Last Updated: August 2026 | Built with ❤️ and modern web technologies*

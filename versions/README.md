@@ -30,9 +30,25 @@ The iOS edition leads with iOS craft/leadership; the Mobile edition leads with c
 (iOS + Android) breadth. Both keep the solo ride-hailing platform's four-platform "delivery
 timeline" as proof of architectural range.
 
-Each edition has a **terminal-design twin** at `2026-07-<family>-terminal/` carrying the same
+Every editorial edition has a **terminal-design twin** at `<edition>-terminal/` carrying the same
 content in the dark IDE look. The editorial edition's **"See the live interactive edition"**
 button links to its twin.
+
+## Leadership editions (2026-08, Editorial design)
+
+Three **independent** files — one per title, so you send the one the posting asks for and never
+edit a resume in the moment. All three share the same career facts and the same design; they
+differ in the opening paragraph, the stat band, and a dedicated leadership section (§ 01) that
+frames the same seven years at Marn for a different reader.
+
+| Title | Folder | § 01 section | PDF |
+|-------|--------|--------------|-----|
+| **CTO** · Head of Engineering | [`2026-08-cto/`](./2026-08-cto/) | *The Technology Office* — strategy, organisation, delivery, whole-stack ownership | `Ahmad_CTO_Resume.pdf` |
+| **Engineering Lead** · Engineering Manager | [`2026-08-engineering-lead/`](./2026-08-engineering-lead/) | *How I Run a Team* — people, predictability, quality, technical credibility | `Ahmad_Engineering_Lead_Resume.pdf` |
+| **Technical Lead** · Staff Engineer · Architect | [`2026-08-technical-lead/`](./2026-08-technical-lead/) | *How I Lead Technically* — architecture, standards in code, mentoring, whole-stack depth | `Ahmad_Technical_Lead_Resume.pdf` |
+
+Each has a terminal-design twin at `2026-08-<title>-terminal/`, linked from its editorial
+"See the live interactive edition" button, and each exports a Riyadh + Cairo PDF.
 
 Each page 1 is packed top-to-bottom — no blank space.
 
