@@ -60,7 +60,7 @@ Senior iOS Tech Lead with **11+ years** of experience leading mobile development
 
 ## 📄 Resume
 
-- **[📱 View Interactive Resume](https://ahmadabdulgawadmahmoud.github.io/ahmad-ios-resume/)** (GitHub Pages)
+- **[📱 View Interactive Resume](https://elgawady14.github.io/ahmad-ios-resume/)** (GitHub Pages)
 - **[📋 Download PDF Resume](./Ahmad_iOS_Resume.pdf)**
 
 ### Targeted editions
@@ -114,7 +114,7 @@ Each also has a dark "terminal" twin at `<edition>-terminal/` for sending as a l
 ## 🚀 GitHub Pages Deployment
 
 This resume is automatically deployed via GitHub Pages at:
-**https://ahmadabdulgawadmahmoud.github.io/ahmad-ios-resume/**
+**https://elgawady14.github.io/ahmad-ios-resume/**
 
 ---
 
