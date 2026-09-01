@@ -75,6 +75,7 @@ for. Every edition exports a Riyadh (default) and a Cairo PDF; see [`versions/`]
 | **CTO · Head of Engineering** | [`versions/2026-08-cto/`](./versions/2026-08-cto/) | `Ahmad_CTO_Resume.pdf` |
 | **Engineering Lead · Engineering Manager** | [`versions/2026-08-engineering-lead/`](./versions/2026-08-engineering-lead/) | `Ahmad_Engineering_Lead_Resume.pdf` |
 | **Technical Lead · Staff Engineer · Architect** | [`versions/2026-08-technical-lead/`](./versions/2026-08-technical-lead/) | `Ahmad_Technical_Lead_Resume.pdf` |
+| **Founding Engineer · Founding CTO** (early-stage) | [`versions/2026-08-founding-cto/`](./versions/2026-08-founding-cto/) | `Ahmad_Founding_CTO_Resume.pdf` |
 
 Each also has a dark "terminal" twin at `<edition>-terminal/` for sending as a live link.
 

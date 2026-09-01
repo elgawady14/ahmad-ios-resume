@@ -25,11 +25,13 @@ you change an `index.html`, you regenerate the PDFs with one command.
 | `cto`                       | `versions/2026-08-cto/index.html`                   | `versions/2026-08-cto/Ahmad_CTO_Resume.pdf`                                                  | `print`    | 0 mm   |
 | `engineering-lead`          | `versions/2026-08-engineering-lead/index.html`      | `versions/2026-08-engineering-lead/Ahmad_Engineering_Lead_Resume.pdf`                         | `print`    | 0 mm   |
 | `technical-lead`            | `versions/2026-08-technical-lead/index.html`        | `versions/2026-08-technical-lead/Ahmad_Technical_Lead_Resume.pdf`                             | `print`    | 0 mm   |
+| `founding-cto`              | `versions/2026-08-founding-cto/index.html`          | `versions/2026-08-founding-cto/Ahmad_Founding_CTO_Resume.pdf`                                 | `print`    | 0 mm   |
 | `ios-terminal`              | `versions/2026-07-ios-terminal/index.html`          | `versions/2026-07-ios-terminal/Ahmad_iOS_Terminal_Resume.pdf`                                 | `screen`   | 9 mm   |
 | `mobile-terminal`           | `versions/2026-07-mobile-terminal/index.html`       | `versions/2026-07-mobile-terminal/Ahmad_Mobile_Terminal_Resume.pdf`                           | `screen`   | 9 mm   |
 | `cto-terminal`              | `versions/2026-08-cto-terminal/index.html`          | `versions/2026-08-cto-terminal/Ahmad_CTO_Terminal_Resume.pdf`                                 | `screen`   | 9 mm   |
 | `engineering-lead-terminal` | `versions/2026-08-engineering-lead-terminal/index.html` | `versions/2026-08-engineering-lead-terminal/Ahmad_Engineering_Lead_Terminal_Resume.pdf`   | `screen`   | 9 mm   |
 | `technical-lead-terminal`   | `versions/2026-08-technical-lead-terminal/index.html`   | `versions/2026-08-technical-lead-terminal/Ahmad_Technical_Lead_Terminal_Resume.pdf`       | `screen`   | 9 mm   |
+| `founding-cto-terminal`     | `versions/2026-08-founding-cto-terminal/index.html`     | `versions/2026-08-founding-cto-terminal/Ahmad_Founding_CTO_Terminal_Resume.pdf`           | `screen`   | 9 mm   |
 
 Editions marked `loc: true` in the script (every editorial/swiss one) export **twice**:
 the default file (Riyadh) and a `…_Cairo_Resume.pdf` twin.

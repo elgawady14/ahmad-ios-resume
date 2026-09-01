@@ -47,6 +47,14 @@ frames the same seven years at Marn for a different reader.
 | **Engineering Lead** · Engineering Manager | [`2026-08-engineering-lead/`](./2026-08-engineering-lead/) | *How I Run a Team* — people, predictability, quality, technical credibility | `Ahmad_Engineering_Lead_Resume.pdf` |
 | **Technical Lead** · Staff Engineer · Architect | [`2026-08-technical-lead/`](./2026-08-technical-lead/) | *How I Lead Technically* — architecture, standards in code, mentoring, whole-stack depth | `Ahmad_Technical_Lead_Resume.pdf` |
 
+| **Founding Engineer** · Founding CTO | [`2026-08-founding-cto/`](./2026-08-founding-cto/) | *Zero to One* — ship from nothing, stack decisions, standards before scale, then lead the team | `Ahmad_Founding_CTO_Resume.pdf` |
+
+The **Founding Engineer** edition is the CTO edition re-cut for founder-shaped roles (early-stage
+startup, founding engineer, hands-on CTO): the ongoing solo platform leads the experience section
+instead of Marn, and the stat band and § 01 are rebuilt around building v1 alone. Use it only where
+the employer wants someone building right now — for an established engineering org, the plain
+**CTO** edition leads with the stronger credential.
+
 Each has a terminal-design twin at `2026-08-<title>-terminal/`, linked from its editorial
 "See the live interactive edition" button, and each exports a Riyadh + Cairo PDF.
 
