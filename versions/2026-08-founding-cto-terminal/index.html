@@ -291,7 +291,7 @@
         <section class="stats rv d2">
             <div class="stat"><div class="v">12<small>+</small></div><div class="k">years <b>engineering</b></div></div>
             <div class="stat"><div class="v">4<small></small></div><div class="k">layers <b>owned solo</b></div></div>
-            <div class="stat"><div class="v">1,150<small>+</small></div><div class="k">tests <b>I wrote</b></div></div>
+            <div class="stat"><div class="v">2,800<small>+</small></div><div class="k">tests <b>I wrote</b></div></div>
             <div class="stat"><div class="v">20<small>k+</small></div><div class="k">businesses <b>on the POS I led</b></div></div>
         </section>
 
@@ -319,7 +319,7 @@
                     <div class="idx">[01] ship from nothing</div>
                     <h3>Empty repo to running system</h3>
                     <p>The first version end to end — data model, API contract, auth, deploy. <b>Trip state machine</b>, <b>scored dispatch</b>, <b>double-entry ledger</b>, realtime sockets.</p>
-                    <div class="mt"><span class="s">◆</span> 1,150+ tests before a second engineer</div>
+                    <div class="mt"><span class="s">◆</span> 2,800+ tests before a second engineer</div>
                 </article>
                 <article class="card">
                     <div class="idx">[02] stack decisions</div>
@@ -347,38 +347,38 @@
             <div class="sec-h"><span class="hash">##</span><span class="nm">experience<b>()</b></span><span class="ln"></span><span class="ct">8 roles</span></div>
             <article class="job">
                 <div class="job-top"><span class="role">Founding Platform Architect — iOS · Android · Backend · Web</span><span class="at">@</span><span class="org">Ride-Hailing Platform · Independent</span><span class="when">Mar 2026 → Present<span class="now">current</span></span></div>
-                <p class="lead">Took the <b>full technical scope of a founding CTO</b> and carried it alone — building a production ride-hailing platform <b>solo</b>: a hardened backend and a real-time ops console <b>in production</b>, with two native <b>iOS/SwiftUI</b> apps (Rider &amp; Driver) and their Android counterparts in active development — <b>owning every layer</b> and setting the engineering standards (idempotency, double-entry accounting, acyclic module boundaries, CI test suite).</p>
+                <p class="lead">Took the <b>full technical scope of a founding CTO</b> and carried it alone — building a production ride-hailing platform <b>solo</b>: a hardened backend and a real-time ops console <b>in production</b>, with two native <b>iOS/SwiftUI</b> apps (Rider &amp; Driver) and the Android driver app in active development — <b>owning every layer</b> and setting the engineering standards (idempotency, double-entry accounting, acyclic module boundaries, CI test suite).</p>
                 <div class="tracks">
                     <div class="track">
                         <div><span class="plat">Backend APIs</span><span class="per">NestJS · TypeScript · Mar '26 → now</span></div>
                         <div>
                             <div class="bar"><i style="left:0%;width:100%"></i></div>
-                            <div class="desc">Modular monolith, ~17 domains — <b>trip state machine</b>, <b>scored dispatch</b> over a Redis geo index, <b>double-entry ledger</b>, realtime rider/driver/admin <b>sockets</b>, JWT + phone-OTP, idempotency &amp; audit log · <b>1,150+ tests</b>, Swagger docs.</div>
+                            <div class="desc">Modular monolith, <b>22 domains</b> — <b>trip state machine</b>, <b>scored dispatch</b> over a Redis geo index, <b>double-entry ledger</b>, realtime rider/driver/admin <b>sockets</b>, JWT + phone-OTP, idempotency &amp; audit log · ~300 endpoints over 47 controllers, <b>2,800+ tests</b>, Swagger docs.</div>
                         </div>
                     </div>
                     <div class="track">
                         <div><span class="plat">Admin Console</span><span class="per">Next.js 14 · Jun '26 → now</span></div>
                         <div>
                             <div class="bar"><i style="left:43%;width:57%"></i></div>
-                            <div class="desc">Bespoke <b>19-screen</b> ops surface — live <b>MapLibre</b> trips map, dispatch/SOS live boards, KYC review, finance reconciliation, refunds/payouts, map <b>zone editor</b>, <b>Google SSO</b>.</div>
+                            <div class="desc">Bespoke <b>30-screen</b> ops surface — live <b>MapLibre</b> trips map, dispatch/SOS live boards, KYC onboarding review, finance reconciliation, refunds/payouts, cash control, map <b>zone editor</b>, feature flags, audit log, <b>Google SSO</b>.</div>
                         </div>
                     </div>
                     <div class="track">
                         <div><span class="plat">iOS Apps · Rider &amp; Driver</span><span class="per">SwiftUI · Jul '26 → now</span></div>
                         <div>
                             <div class="bar"><i style="left:57%;width:43%"></i></div>
-                            <div class="desc">Two native <b>SwiftUI</b> apps — live GPS <b>trip lifecycle</b>, realtime sockets, in-app chat, payments, and driver earnings &amp; turn-by-turn navigation.</div>
+                            <div class="desc">Two native <b>SwiftUI</b> apps on a shared <b>BuraqCore</b> Swift package (domain · networking · design system, pinned remotely) — live GPS <b>trip lifecycle</b>, Socket.IO feeds with fresh-token reconnect, in-app chat, payments, Live Activities, driver earnings &amp; turn-by-turn navigation · ~150 SwiftUI views, <b>430+ tests</b>.</div>
                         </div>
                     </div>
                     <div class="track">
-                        <div><span class="plat">Android Apps · Rider &amp; Driver</span><span class="per">Kotlin · Jetpack Compose · Sep '26 → now</span></div>
+                        <div><span class="plat">Android App · Driver</span><span class="per">Kotlin · Jetpack Compose · Sep '26 → now</span></div>
                         <div>
-                            <div class="bar"><i style="left:86%;width:14%"></i></div>
-                            <div class="desc">Native <b>Kotlin / Compose</b> parity for both apps — same trip lifecycle, realtime tracking, chat, and payments across <b>one shared API contract</b>.</div>
+                            <div class="bar"><i style="left:71%;width:29%"></i></div>
+                            <div class="desc">Native <b>Kotlin / Compose</b> port of the driver app against <b>the same API contract</b> — modularised (core · networking · design system · domain) with the design-system and CI bar in place; product features porting now.</div>
                         </div>
                     </div>
                 </div>
-                <p class="close">One backend · one contract · four clients in flight — plus growth loops (promotions, referrals, loyalty, wallet), driver safety/SOS, and scheduled reconciliation jobs, owned end-to-end.</p>
+                <p class="close">One backend · one contract · three clients in flight — plus growth loops (promotions, referrals, loyalty, wallet), driver safety/SOS, and scheduled reconciliation jobs, owned end-to-end.</p>
             </article>
 
 
@@ -473,7 +473,7 @@
                     <div class="idx">[02] full-stack</div>
                     <h3>Ride-Hailing Platform</h3>
                     <div class="tech">SwiftUI · Kotlin · Jetpack Compose · NestJS · TypeScript · PostgreSQL · Redis · Socket.IO · Next.js</div>
-                    <p>End-to-end ride-hailing system built solo: a hardened NestJS backend (idempotency, double-entry ledger, 1,150+ tests) and a real-time Next.js ops console in production, with <b>four native clients</b> (Rider &amp; Driver on iOS + Android) in active development.</p>
+                    <p>End-to-end ride-hailing system built solo: a hardened NestJS backend (idempotency, double-entry ledger, 2,800+ tests) and a real-time Next.js ops console in production, with <b>three native clients</b> (Rider &amp; Driver on iOS, Driver on Android) in active development.</p>
                     <div class="mt"><span class="s">◆</span> Full-stack ownership · prod security</div>
                 </article>
                 <article class="card">
@@ -551,7 +551,7 @@
                     <div class="sec-h"><span class="hash">##</span><span class="nm">honours<b>[]</b></span><span class="ln"></span></div>
                     <div class="h-item"><span class="n">01</span><span class="t">Led an iOS engineering team for <b>7 consecutive years</b> on a POS platform serving <b>20k+ restaurants</b> and cafés.</span></div>
                     <div class="h-item"><span class="n">02</span><span class="t">Held a <b>99.8–99.9% crash-free</b> rate and cut deployment time <b>60%</b> with the standards, tests and CI/CD the team ran on.</span></div>
-                    <div class="h-item"><span class="n">03</span><span class="t">Architecting a <b>full-stack ride-hailing platform solo</b> — NestJS/PostgreSQL backend and Next.js ops console in production, four native clients (iOS + Android) in development.</span></div>
+                    <div class="h-item"><span class="n">03</span><span class="t">Architecting a <b>full-stack ride-hailing platform solo</b> — NestJS/PostgreSQL backend and Next.js ops console in production, three native clients (two iOS, one Android) in development.</span></div>
                     <div class="h-item"><span class="n">04</span><span class="t">Built a food-delivery platform serving <b>20M+ users</b> and a ride-hailing ecosystem serving <b>15M+ users</b> in Saudi Arabia.</span></div>
                     <div class="h-item"><span class="n">05</span><span class="t"><b>10+ apps</b> on the App Store, used by millions across MENA.</span></div>
                     <div class="h-item"><span class="n">06</span><span class="t"><b>30+ projects</b> delivered across a 12-year career.</span></div>
